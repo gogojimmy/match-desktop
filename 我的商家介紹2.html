@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>header</title>
+    <title>我的商家介紹2</title>
     <link href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/select2/dist/css/select2.css" rel="stylesheet">
     <link href="style/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -347,7 +348,143 @@
 
 <!--主体内容 开始-->
 <div class="container">
+    <div class="business-edit">
+        <h3 class="tit">編輯商家介紹</h3>
+        <ul class="tab-cos nav nav-tabs">
+            <li class="active">
+                <a href="#" data-target="#page1" data-toggle="tab">商家資訊</a>
+            </li>
+            <li>
+                <a href="#" data-target="#page2" data-toggle="tab">聯絡人</a>
+            </li>
+            <li>
+                <a href="#" data-target="#page3" data-toggle="tab">商家介紹</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="page1">
+                <form action="">
+                    <div class="tip">* 必填欄位</div>
+                    <div class="photos">
+                        <label>請上傳商家LOGO</label>
+                        <div class="photo">
+                            <img src="images/Oval@2x.png" alt="">
+                            <span class="file-btn">
+                            <input type="file" accept="image/*">
+                        </span>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>商家名稱 <i>*</i></label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="input-group">
+                        <label>統一編號 <i>*</i></label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="input-group">
+                        <label>密碼 <i>*</i></label>
+                        <input type="password" class="form-control">
+                    </div>
+                    <div class="input-group">
+                        <label>
+                            公司地址<i>*</i>
+                        </label>
+                        <div class="clearfix city">
+                            <select style="width: 162px;" class="form-control" name="" >
+                                <option>台北市</option>
+                                <option>台中市</option>
+                            </select>
+                            <select style="width: 162px" class="form-control" name="" >
+                                <option>中山區</option>
+                                <option>中山區</option>
+                            </select>
+                        </div>
+                        <input type="text" placeholder="街道" class="form-control">
+                    </div>
+                    <div class="input-group">
+                        <label>
+                            商家網站
+                            <i>*</i>
+                        </label>
+                        <div class="www">
+                            <span class="pull-left">https://</span>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <button  type="submit" class="btn btn-black">儲存變更</button>
+                </form>
+            </div>
+            <div class="tab-pane" id="page2">
+                <form action="">
+                    <div style="margin-bottom:10px" class="tip">* 必填欄位</div>
+                    <div class="input-group">
+                        <label>聯絡人名稱 <i>*</i></label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="input-group">
+                        <label>聯絡人E-mail <i>*</i></label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="input-group">
+                        <label>聯絡人市話 <i>*</i></label>
+                        <input type="text" placeholder="02-0000-0000-分機" class="form-control">
+                    </div>
+                    <div class="input-group">
+                        <label>聯絡人手機號碼 <i>*</i></label>
+                        <input type="text" placeholder="0900-000-000" class="form-control">
+                    </div>
+                    <div class="clearfix"></div>
+                    <button  type="submit" class="btn btn-black">儲存變更</button>
+                </form>
+            </div>
+            <div class="tab-pane" id="page3">
+                <form action="">
+                    <div style="margin-bottom:10px" class="tip">* 必填欄位</div>
+                    <div class="input-group">
+                        <label>商家簡介 <i>*</i><span class="tip1">一個好的介紹能幫你更有效吸引網美！</span></label>
+                        <textarea placeholder="有什麼想展示給大家看的？（限500字）" class="form-control"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label>
+                            主要商品或品牌或服務
+                            <i>*</i>
+                        </label>
+                        <div class="input-cos">
+                            <input placeholder="L’Oreal 純色訂製唇膏" type="text" class="form-control">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="photos photos1">
+                        <div class="photo">
+                            <img src="images/m1.png" alt="">
+                            <span class="file-btn">
+                            <input type="file" accept="image/*">
+                        </span>
+                            <span class="del"></span>
+                        </div>
+                        <div class="photo">
+                            <img src="images/m2.png" alt="">
+                            <span class="file-btn">
+                            <input type="file" accept="image/*">
+                        </span>
+                            <span class="del"></span>
+                        </div>
+                        <div class="photo">
+                            <img src="images/m3.png" alt="">
+                            <span class="file-btn">
+                            <input type="file" accept="image/*">
+                        </span>
+                            <span class="del"></span>
+                        </div>
+                    </div>
 
+                    <div class="clearfix"></div>
+                    <button  type="submit" class="btn btn-black">儲存變更</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 <!--主体内容 结束-->
 
@@ -359,6 +496,7 @@
 
 <script src="lib/jquery/1.12.4/jquery.min.js"></script>
 <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="lib/select2/dist/js/select2.min.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

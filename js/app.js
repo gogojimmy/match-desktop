@@ -1,6 +1,8 @@
 $(function(){
     // 计算浏览器宽度
     resizeView();
+    // 全局返回顶部
+    backTop();
     // nav start
     $(".nav-list>li>a").on('click', function(e){
         e.stopPropagation();
@@ -54,20 +56,20 @@ $(function(){
     }
 
     // 網美寫履歷3-經歷
-    $(".input span").on('click', function(){
+    $(".input-cos span").on('click', function(){
         if($(this).hasClass('on')){
             removeInput($(this));
         }else{
             addInput($(this));
         }
     })
-    $(".input input").on('blur', function(){
+    $(".input-cos input").on('blur', function(){
         addOn($(this));
     });
     // 添加一行
     function addInput(self){
-        self.parent().parent().parent().find('.input span').addClass('on');
-        var input = $('<div class="input">\n' +
+        self.parent().parent().parent().find('.input-cos span').addClass('on');
+        var input = $('<div class="input-cos">\n' +
             ' <input type="text" class="form-control">\n' +
             ' <span></span>\n' +
             ' </div>');
@@ -158,7 +160,11 @@ $(function(){
         }else{
             $('.ren').hide();
         }
-    })
+    });
+
+    // 我的商家介紹-轮播
+
+
 
 
 
@@ -178,4 +184,17 @@ function resizeView(){
         $("header").css({width: clintWidth + 'px'});
         $(".container").css({width: clintWidth + 'px', height: clintHeight + 'px'});
     })
+}
+// 返回顶部
+function backTop(){
+    $(".slider-top").on('click', function(){
+        $(".container").animate({scrollTop: 0+'px'},300);
+    })
+    $(".container").scroll(function(){
+        if($(this).scrollTop()>350){
+            $(".slider-top").fadeIn(300);
+        }else{
+            $(".slider-top").fadeOut(300);
+        }
+    });
 }

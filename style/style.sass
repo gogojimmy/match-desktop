@@ -25,7 +25,7 @@ label>.error
   margin-left: 5px
 input.error
   border-color: red
-input:focus
+input:focus,textarea:focus
   border-color: #2B2B2D!important
   box-shadow: none!important
 input[type=checkbox], input[type=radio]
@@ -65,6 +65,8 @@ input+label.checkbox-xs
 input:checked+label.checkbox-xs::before
   background: url("../images/icon@2x/checkbox-checked@2x.png") 0 0 no-repeat
   background-size: 17px 17px
+
+// btn
 .btn
   font-weight: 500
 .btn.disabled
@@ -217,6 +219,8 @@ ul
   padding: 0px
   margin: 0px
 
+
+// modal-show-stayle
 .modal-show
   .modal-header
     border-bottom: 0
@@ -233,6 +237,8 @@ ul
     width: 100%
     margin: 0 auto
 
+
+// select2
 .select2
   margin-bottom: 20px!important
   margin-right: 15px!important
@@ -242,6 +248,9 @@ ul
     line-height: 50px!important
   .select2-selection--single
     border: solid 1px #dedddf!important
+
+
+//file-btn-photo
 .photos
   margin-top: 10px
   .photo
@@ -310,6 +319,148 @@ ul
       margin-right: 16px
     &:nth-child(4n+0)
       margin-right: 0
+
+
+// list1
+.public-list
+  display: block
+  overflow: hidden
+.public-list>li
+  margin-right: 44px
+  margin-bottom: 40px
+  width: 314px
+  height: 339px
+  float: left
+  overflow: hidden
+  img
+    width: 314px
+    height: 206px
+    border-radius: 2px
+  .info
+    margin-top: 17px
+    .sub-title
+      .pull-left
+        color: #4a4a4a
+        font-size: 14px
+        font-weight: 500
+      .pull-right
+        color: #9b9b9b
+        font-size: 13px
+        font-weight: 500
+        i
+          width: 8px
+          height: 14px
+          display: inline-block
+          background: url("../images/icon@2x/position@2x.png") 0 0 no-repeat
+          background-size: 8px 14px
+          float: left
+          margin-top: 3px
+          margin-right: 9px
+  h3
+    font-size: 18px
+    font-weight: 500
+    color: $font-color
+    margin-top: 6px
+    margin-bottom: 12px
+  p
+    color: #525252
+    font-size: 14px
+    margin-bottom: 0px
+.public-list>li:nth-child(3n+0)
+  margin-right: 0
+
+// tab head
+.tab-cos.nav
+  li>a
+    position: relative
+    padding-left: 0
+    padding-right: 0
+    font-size: 14px
+    font-weight: 500
+    color: #b9b9b9
+    background: none
+    border: 0
+    box-shadow: none
+    width: auto
+    margin-right: 30px
+    &:hover
+      border: none
+    &:link
+      border: none
+  li:last-child>a
+    margin-right: 0!important
+  li.active>a
+    color: $font-color
+  li.active>a::before
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    display: block
+    content: ''
+    height: 1px
+    border-radius: 3px
+    background-color: #2b2b2d
+    border: solid 1px #2b2b2d
+    li>a::after
+      display: none
+      content: ''
+      width: 7px
+      height: 7px
+      border-radius: 50%
+      background-color: #fbdbd7
+      position: absolute
+      top: 0
+      bottom: 0
+      right: -15px
+      margin: auto 0
+      li.on>a::after
+        display: block
+
+
+// input-cos
+.input-cos
+  position: relative
+  height: 50px
+  &::before
+    display: block
+    width: 30px
+    height: 30px
+    position: absolute
+    content: ''
+    top: 0
+    background: url("../images/icon@2x/yes-icon@2x.png") 0 0 no-repeat
+    background-size: 30px 30px
+    bottom: 0
+    z-index: 99
+    margin: auto 0
+  input
+    padding-left: 41px
+    width: 469px
+    height: 50px
+    border: 0px
+    border-bottom: 1px solid #dedddf
+    box-shadow: none!important
+    border-radius: 0!important
+  span
+    display: block
+    width: 28px
+    height: 28px
+    background: url("../images/icon@2x/add-icon@2x.png") 0 0 no-repeat
+    background-size: 28px 28px
+    position: absolute
+    right: 0px
+    bottom: 0
+    top: 0
+    z-index: 99
+    margin: auto 0
+  span.on
+    background: url("../images/icon@2x/del-icon@2x.png") 0 0 no-repeat
+    background-size: 28px 28px
+
+.input-cos.on::before
+  background: url("../images/icon@2x/yes1-icon@2x.png") 0 0 no-repeat
+  background-size: 30px 30px
 
 // public global end
 
@@ -520,7 +671,7 @@ header
   background-color: #fff
   padding-bottom: 20px
   box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.03)
-  .nav
+  .btn-nav.nav
     width: 604px
     margin: 0 auto
     padding-top: 29px
@@ -578,6 +729,11 @@ header
         margin-top: 73px
         margin-bottom: 20px
 
+    .tab-cos.nav
+      margin: 30px 0 13px
+      border-bottom: 0
+      li>a
+        margin-right: 126.4px
     .operation
       margin-top: 40px
       overflow: hidden
@@ -587,45 +743,6 @@ header
         color: $font-color
         opacity: 1
         cursor: pointer
-    .nav>li>a
-      position: relative
-      font-size: 14px
-      font-weight: 500
-      color: #b9b9b9
-      background: none
-      border: 0
-      box-shadow: none
-      width: auto
-      margin-right: 112px
-    .nav>li:last-child>a
-      margin-right: 0
-    .nav>li.active>a
-      color: $font-color
-    .nav>li.active>a::before
-      position: absolute
-      bottom: 0
-      left: 0
-      width: 100%
-      display: block
-      content: ''
-      height: 1px
-      border-radius: 3px
-      background-color: #2b2b2d
-      border: solid 1px #2b2b2d
-    .nav>li>a::after
-      display: none
-      content: ''
-      width: 7px
-      height: 7px
-      border-radius: 50%
-      background-color: #fbdbd7
-      position: absolute
-      top: 0
-      bottom: 0
-      right: -15px
-      margin: auto 0
-    .nav>li.on>a::after
-      display: block
     .tab-content
       overflow: hidden
       margin-top: 20px
@@ -844,49 +961,6 @@ header
     position: relative
     max-width: 1036px
     margin: 70px auto 0
-    .list>li
-      margin-right: 44px
-      margin-bottom: 40px
-      width: 314px
-      height: 339px
-      float: left
-      overflow: hidden
-      img
-        width: 314px
-        height: 206px
-        border-radius: 2px
-      .info
-        margin-top: 17px
-        .sub-title
-          .pull-left
-            color: #4a4a4a
-            font-size: 14px
-            font-weight: 500
-          .pull-right
-            color: #9b9b9b
-            font-size: 13px
-            font-weight: 500
-            i
-              width: 8px
-              height: 14px
-              display: inline-block
-              background: url("../images/icon@2x/position@2x.png") 0 0 no-repeat
-              background-size: 8px 14px
-              float: left
-              margin-top: 3px
-              margin-right: 9px
-      h3
-        font-size: 18px
-        font-weight: 500
-        color: $font-color
-        margin-top: 6px
-        margin-bottom: 12px
-      p
-        color: #525252
-        font-size: 14px
-        margin-bottom: 0px
-    .list>li:nth-child(3n+0)
-      margin-right: 0
 
 
 // 登陆+注册
@@ -1223,49 +1297,6 @@ header
           margin-bottom: 10px
           &:nth-of-type(6n+0)
             margin-right: 0
-      .input
-        position: relative
-        height: 50px
-        &::before
-          display: block
-          width: 30px
-          height: 30px
-          position: absolute
-          content: ''
-          top: 0
-          background: url("../images/icon@2x/yes-icon@2x.png") 0 0 no-repeat
-          background-size: 30px 30px
-          bottom: 0
-          z-index: 99
-          margin: auto 0
-        input
-          padding-left: 41px
-          width: 469px
-          height: 50px
-          border: 0px
-          border-bottom: 1px solid #dedddf
-          box-shadow: none
-          border-radius: 0
-        span
-          display: block
-          width: 28px
-          height: 28px
-          background: url("../images/icon@2x/add-icon@2x.png") 0 0 no-repeat
-          background-size: 28px 28px
-          position: absolute
-          right: 0px
-          bottom: 0
-          top: 0
-          z-index: 99
-          margin: auto 0
-        span.on
-          background: url("../images/icon@2x/del-icon@2x.png") 0 0 no-repeat
-          background-size: 28px 28px
-
-
-      .input.on::before
-        background: url("../images/icon@2x/yes1-icon@2x.png") 0 0 no-repeat
-        background-size: 30px 30px
       .www
         margin: 5px 0
         overflow: hidden
@@ -1537,6 +1568,210 @@ header
     &:first-of-type
       margin-right: 40px
 
+// 商家介绍
+.business-introduce
+  width: 982px
+  margin: 0 auto
+  .content-top
+    width: 774px
+    margin: 0 auto
+    .banner
+      width: 100%
+      .swiper-slide
+        width: 100%
+        img
+          width: 100%
+      .swiper-button-prev
+        width: 15px
+        height: 24px
+        background: url("../images/icon@2x/Triangle-l@2x.png") 0 0 no-repeat
+        background-size: 15px 24px
+      .swiper-button-next
+        width: 15px
+        height: 24px
+        background: url("../images/icon@2x/Triangle-r@2x.png") 0 0 no-repeat
+        background-size: 15px 24px
+    .title
+      overflow: hidden
+      width: 100%
+      height: 42px
+      line-height: 42px
+      margin: 40px 0 20px
+      h3
+        height: 42px
+        line-height: 42px
+        font-size: 22px
+        float: left
+        font-weight: 500
+        color: #2b2b2d
+      .btn
+        width: 108px
+        float: right
+        height: 42px
+    .line
+      margin-top: 30px
+    .info
+      font-size: 14px
+      font-weight: normal
+      img
+        float: left
+        width: 13px
+        height: 13px
+        margin-right: 10px
+        margin-top: 3px
+      a
+      color: #00559d
+      p
+        color: $font-color
+        margin-top: 20px
+    .desc
+      h3
+        margin: 40px 0 20px
+        font-size: 18px
+        font-weight: 500
+        color: $font-color
+      p
+        font-size: 16px
+        font-weight: normal
+        color: $font-color
+        margin-bottom: 5px
+  .list-box
+    width: 982px
+    margin: 30px auto
+    h3.tit
+      width: 774px
+      margin: 0 auto 65px
+      font-size: 18px
+      font-weight: 500
+      color: $font-color
+    .public-list>li
+      margin-right: 20px
+      margin-bottom: 50px
+      &:nth-child(3n+0)
+        margin-right: 0
+
+// 編輯商家介紹
+.business-edit
+  width: 512px
+  margin: auto
+  h3.tit
+    font-size: 22px
+    font-weight: 500
+    color: $font-color
+    margin: 30px 0 40px
+  .tab-cos.nav
+    border-bottom: 2px solid #dedddf
+    li > a
+      font-size: 18px
+    li.active > a::before
+      border: solid 1.5px #2b2b2d
+      bottom: -3px
+  .tab-content
+    margin-top: 38px
+    .tip
+      font-size: 14px
+      color: #b9b9b9
+      font-weight: normal
+    .photos
+      overflow: hidden
+      width: 100%
+      label
+        font-size: 14px
+        display: block
+        font-weight: normal
+        color: $font-color
+      .photo
+        margin: 10px auto 0
+        float: none
+        width: 106px
+        height: 106px
+        border: 0px
+        border-radius: 50%
+        .file-btn
+          width: 100%
+          height: 100%
+          top: 0
+          left: 0
+          background: none
+    .input-group
+      width: 100%
+      margin-bottom: 40px
+      input
+        border-radius: 5px
+        height: 50px
+        line-height: 50px
+      textarea
+        height: 139px
+        border-radius: 5px
+        background-color: #ffffff
+        box-shadow: none
+        border: solid 1px #dedddf
+        resize: none
+      label
+        font-size: 14px
+        color: $font-color
+        font-weight: normal
+        .tip1
+          margin-left: 8px
+          font-size: 13px
+          color: #4a4a4a
+          font-weight: normal
+        i
+          font-size: 16px
+          font-style: normal
+          margin-left: 5px
+          color: #fbdbd7
+          font-weight: 500
+        .tip
+          margin-left: 10px
+          color: #b9b9b9
+      .select2
+        margin-right: 15px!important
+        marign-bottom: 20px!important
+      .www
+        margin: 5px 0
+        overflow: hidden
+        float: left
+        img
+          width: 30px
+          height: 30px
+          float: left
+          margin-top: 10px
+          margin-right: 30px
+        input
+          width: 443px
+          float: left
+        span
+          margin-right: 15px
+          height: 50px
+          line-height: 50px
+          font-size: 14px
+          font-weight: normal
+          color: $font-color
+    .btn
+      width: 100%
+      display: block
+      margin: 40px 0 65px
+      height: 55px
+      line-height: 55px
+    .photos1
+      margin-bottom: 40px
+      .photo
+        width: 154px
+        height: 154px
+        float: left
+        border-radius: 2px
+        border: solid 1px #dedddf
+        margin-right: 25px
+        &:nth-child(3n+0)
+          margin-right: 0!important
+
+
+
+
+
+
+
 //主体内容结束
 
 //desktop
@@ -1572,3 +1807,16 @@ header
       font-size: 12px
       display: block
 
+// slider-top
+.slider-top
+  width: 63px
+  height: 38px
+  position: fixed
+  right: 20px
+  bottom: 150px
+  z-index: 199
+  cursor: pointer
+  opacity: 0.7
+  display: none
+  &:hover
+    opacity: 1
