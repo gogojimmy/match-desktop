@@ -1,0 +1,1362 @@
+// public global start
+$font-color: #2b2b2d
+html,body
+  width: 100%
+  height: 100%
+  overflow: hidden
+body
+  overflow: hidden
+h1,h2,h3,h4,h5
+  margin: 0
+  padding: 0
+.select2-dropdown
+  border: solid 1px #dedddf
+  border-top: none
+button,.btn,a,select
+  outline: none!important
+input
+  color: $font-color
+  font-size: 14px
+input[type=text],input[type=password],input[type=number],input[type=email],textarea
+  border: solid 1px #dedddf
+label>.error
+  color: red
+  margin-left: 5px
+input.error
+  border-color: red
+input:focus
+  border-color: #2B2B2D!important
+  box-shadow: none!important
+input[type=checkbox], input[type=radio]
+  display: none
+input+label.checkbox
+  border-radius: 22.5px
+  width: 78px
+  height: 40px
+  text-align: center
+  line-height: 40px
+  display: inline-block
+  font-size: 13px
+  color: $font-color
+  font-weight: 500
+  cursor: pointer
+  background-color: #e9e9e9
+input:checked+label.checkbox
+  background-color: #fbdbd7
+input+label.checkbox-xs
+  position: relative
+  cursor: pointer
+  padding-left: 25px
+  color: $font-color
+  font-size: 14px
+  &::before
+    width: 17px
+    height: 17px
+    content: ''
+    display: inline-block
+    background: url("../images/icon@2x/checkbox-defult@2x.png") 0 0 no-repeat
+    background-size: 17px 17px
+    position: absolute
+    top: 0px
+    left: 0
+    bottom: 0px
+    margin: auto 0
+input:checked+label.checkbox-xs::before
+  background: url("../images/icon@2x/checkbox-checked@2x.png") 0 0 no-repeat
+  background-size: 17px 17px
+.btn.disabled
+  background-color: #9b9b9b
+  color: #fff
+.btn-default
+  width: 164px
+  height: 43px
+  line-height: 43px
+  display: inline-block
+  background-color: #dedddf
+  border-radius: 5px
+  color: #2b2b2d
+  padding: 0
+  font-size: 14px
+  text-align: center
+  &:hover
+    color: #2b2b2d
+    background-color: #E4E3E5
+  &:active
+    background-color: #B7B7B8
+
+.btn-black
+  width: 164px
+  height: 43px
+  line-height: 43px
+  display: inline-block
+  background-color: #2B2B2D
+  border-radius: 5px
+  color: #FBDBD7
+  padding: 0
+  font-size: 14px
+  text-align: center
+  &:hover
+    color: #FBDBD7
+    background-color: #454547
+  &:active
+    background-color: #000
+.btn-blue
+  width: 164px
+  height: 43px
+  line-height: 43px
+  display: inline-block
+  background-color: #00559D
+  border-radius: 5px
+  color: #fff
+  padding: 0
+  font-size: 14px
+  text-align: center
+  &:hover
+    color: #fff
+    background-color: #0065B8
+  &:active
+    background-color: #004985
+.btn-red
+  width: 164px
+  height: 43px
+  line-height: 43px
+  display: inline-block
+  background-color: #C62828
+  border-radius: 5px
+  color: #fff
+  padding: 0
+  font-size: 14px
+  text-align: center
+  &:hover
+    color: #fff
+    background-color: #E02D2D
+  &:active
+    background-color: #AD2323
+.btn-pink
+  width: 164px
+  height: 43px
+  line-height: 43px
+  display: inline-block
+  font-size: 14px
+  text-align: center
+  padding: 0
+  color: $font-color
+  background-color: #FBDBD7
+  &:hover
+    background-color: #FEF4F3
+  &:active
+    background-color: #FACEC8
+.btn-photo
+  display: block
+  margin: 0 auto
+  width: 106px
+  position: relative
+  height: 106px
+  border-radius: 50%
+  background-color: #f3f3f3
+  border: solid 1px #dedddf
+  img
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    margin: auto
+    z-index: 8
+  input
+    width: 100%
+    height: 100%
+    display: block
+    font-size: 100px
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    opacity: 0
+    margin: auto
+    z-index: 10
+  i
+    width: 28px
+    height: 28px
+    display: block
+    position: absolute
+    top: 0
+    bottom: 0px
+    left: 0px
+    right: 0px
+    margin: auto
+    background: url("../images/icon@2x/file-add@2x.png") 0 0  no-repeat
+    background-size: 28px 28px
+    z-index: 7
+  em
+    width: 27px
+    height: 27px
+    display: block
+    position: absolute
+    bottom: 0px
+    right: 0px
+    margin: auto
+    background: url("../images/icon@2x/camera@2x.png") 0 0  no-repeat
+    background-size: 27px 27px
+    z-index: 9
+.line
+  width: 100%
+  height: 2px
+  background-color: #dedddf
+ul
+  padding: 0px
+  margin: 0px
+
+.modal-show
+  .modal-header
+    border-bottom: 0
+  .modal-content,.modal-dialog
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    width: 494px!important
+    margin: auto !important
+    height: 415px!important
+    overflow: hidden!important
+    width: 100%
+    margin: 0 auto
+
+
+// public global end
+
+// nav start
+nav
+  z-index: 9
+  width: 220px
+  height: 100%
+  display: block
+  position: absolute
+  left: 0px
+  top: 0px
+  background-color: #f9f9f9
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2)
+  #logo
+    width: 100%
+    height: 58px
+    a
+      width: 152px
+      height: 25px
+      display: block
+      margin: auto
+      background: url("../images/MATCH-LOGO-02@2x.png") 0 0 no-repeat
+      background-size: 152px 25px
+  .nav-list>li
+    position: relative
+    margin-bottom: 8px
+    ul
+      display: none
+      li
+        padding-left: 64px
+        margin-bottom: 30px
+        a
+          color: $font-color
+          font-size: 14px
+    ul>li:first-child
+      margin-top: 25px
+  .nav-list>li>a::after
+    width: 90%
+    height: 2px
+    display: none
+    position: absolute
+    content: ''
+    background-color: #FBDBD7
+    bottom: -1px
+    left: 0px
+    right: 0px
+    margin: 0 auto
+  .nav-list>li.on>a
+    background-color: #DEDDDF
+    i
+      transform: rotate(0deg)
+  .nav-list>li.on>a::after
+    display: block
+  .nav-list>li>a
+    padding-left: 63px
+    display: block
+    width: 100%
+    height: 44px
+    position: relative
+    text-decoration: none
+    font-weight: 500
+    color: $font-color
+    line-height: 44px
+    img
+      position: absolute
+      display: block
+      left: 25px
+      top: 0px
+      bottom: 0px
+      margin: auto 0
+    i
+      display: block
+      width: 12px
+      height: 7px
+      background: url("../images/icon@2x/CombinedShape@2x.png")  center center no-repeat
+      background-size: 12px 7px
+      position: absolute
+      top: 0px
+      bottom: 0px
+      right: 20px
+      margin: auto 0
+      transform: rotate(90deg)
+    &:hover
+      background-color: #DEDDDF
+      &::after
+        display: block
+  .nav-footer
+    height: 178px
+    width: 100%
+    padding: 0 8px
+    position: absolute
+    bottom: 0
+    left: 0
+    .btn-black
+      position: relative
+      width: 155px
+      height: 39px
+      line-height: 39px
+      padding-left: 40px
+      display: block
+      margin: 0 auto 25px
+      &::before
+        content: ''
+        display: block
+        width: 28px
+        height: 18px
+        background: url("../images/icon@2x/speaker-black@2x.png") 0 0 no-repeat
+        background-size: 28px 18px
+        position: absolute
+        top: 0px
+        bottom: 0px
+        left: 10px
+        margin: auto 0
+    .link
+      margin-top: 24px
+      overflow: hidden
+      padding: 0 39px
+      a
+        color: $font-color
+        font-size: 12px
+        margin-right: 30px
+        float: left
+        margin-bottom: 20px
+      a:nth-child(2n+0)
+        margin-right: 0
+
+// nav end
+
+//header start
+header
+  padding-right: 220px
+  z-index: 8
+  height: 58px
+  width: 100%
+  position: absolute
+  top: 0px
+  left: 0px
+  margin-left: 220px
+  background-color: #ffffff
+  border-bottom: 1px solid #f3f3f3
+  .btn-select
+    display: block
+    position: absolute
+    top: 0px
+    bottom: 0px
+    left: 33px
+    margin: auto 0
+    padding: 0
+    line-height: 35px
+    width: 252px
+    height: 38px
+    border-radius: 5px
+    background: #ffffff url("../images/icon@2x/condition@2x.png") 15px center no-repeat
+    background-size: 14px 18px
+    border-radius: 5px
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.09)
+    border: solid 1px #e9e9e9
+    font-size: 14px
+    font-weight: 500
+    text-align: center
+    color: $font-color
+    &:hover
+      background-color: #FBDBD7
+  .btn-select.on
+    background-color: #FBDBD7
+  a
+    margin-right: 30px
+    width: 50px
+    height: 58px
+    text-align: center
+    color: $font-color
+    font-size: 14px
+    font-weight: 500
+    line-height: 58px
+  a.register-btn
+    background: url("../images/icon@2x/Triangle@2x.png") 0 center no-repeat
+    background-size:  12px 17px
+  a.email
+    position: relative
+    background: url("../images/icon@2x/mail-black@2x.png") center center no-repeat
+    background-size: 22px 15px
+    .badge
+      position: absolute
+      top: 14px
+      right: 5px
+      width: 14px
+      height: 14px
+      line-height: 14px
+      text-align: center
+      padding: 0
+      font-size: 11px
+      color: #ffffff
+      font-weight: 100
+      background-color: #c62828
+//header end
+
+// search start
+.search
+  z-index: 6
+  position: absolute
+  //top: 58px
+  top: -1000px
+  left: 0
+  width: 100%
+  min-height: 495px
+  background-color: #fff
+  padding-bottom: 20px
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.03)
+  .nav
+    width: 604px
+    margin: 0 auto
+    padding-top: 29px
+    border: 0
+    a
+      display: block
+      width: 142px
+      height: 40px
+      margin-right: 20px
+      text-align: center
+      border-radius: 5px
+      padding: 0
+      line-height: 40px
+      border: solid 1px #f3f3f3
+      background-color: #f3f3f3
+      color: #9b9b9b
+      box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.08)
+      &:hover
+        border: solid 1px #f3f3f3
+      &:link
+        border: solid 1px #f3f3f3
+    li.active>a
+      background-color: #fff
+      color: $font-color
+  .tab-content
+    width: 604px
+    margin: 40px auto 0
+    #tab1>.btn
+      width: 207px
+      height: 52px
+      line-height: 52px
+      padding: 0
+      display: block
+      margin-top: 15px
+    #tab2
+      .place
+        margin-top: 40px
+        h3
+          font-size: 14px
+          font-weight: 500
+          color: $font-color
+          font-weight: 500
+          margin-bottom: 20px
+        label
+          color: #b9b9b9
+          cursor: pointer
+          margin-right: 51px
+        input
+          display: none
+          &:checked+label
+            color: $font-color
+      .btn-pink
+        width: 207px
+        height: 52px
+        margin-top: 73px
+        margin-bottom: 20px
+
+    .operation
+      margin-top: 40px
+      overflow: hidden
+      span
+        font-size: 14px
+        font-weight: 500
+        color: $font-color
+        opacity: 1
+        cursor: pointer
+    .nav>li>a
+      position: relative
+      font-size: 14px
+      font-weight: 500
+      color: #b9b9b9
+      background: none
+      border: 0
+      box-shadow: none
+      width: auto
+      margin-right: 112px
+    .nav>li:last-child>a
+      margin-right: 0
+    .nav>li.active>a
+      color: $font-color
+    .nav>li.active>a::before
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      display: block
+      content: ''
+      height: 1px
+      border-radius: 3px
+      background-color: #2b2b2d
+      border: solid 1px #2b2b2d
+    .nav>li>a::after
+      display: none
+      content: ''
+      width: 7px
+      height: 7px
+      border-radius: 50%
+      background-color: #fbdbd7
+      position: absolute
+      top: 0
+      bottom: 0
+      right: -15px
+      margin: auto 0
+    .nav>li.on>a::after
+      display: block
+    .tab-content
+      overflow: hidden
+      margin-top: 20px
+      margin-bottom: 35px
+      div>label
+        display: block
+        float: left
+        margin-right: 9.5px
+        margin-bottom: 15px
+        border-radius: 22.5px
+    .tab-content>div>label:nth-of-type(7n+0)
+      margin-right: 0px
+    .tab-content>div>input
+      display: none
+
+// search end
+
+//主体内容开始
+.container
+  position: absolute
+  top: 58px
+  height: 100%
+  overflow: hidden
+  left: 220px
+  padding: 0
+  overflow-y: auto
+  background-color: #fff
+@media screen and (max-width: 1920px)
+  .container
+    width: 1700px
+@media screen and (max-width: 1366px)
+  .container
+    width: 1146px
+
+//index
+.index
+  .index-banner
+    width: 100%
+    .swiper-container
+      overflow: inherit
+    .swiper-slide
+      width: 100%
+      img
+        width: 100%
+    .swiper-pagination-bullets
+      bottom: -30px
+      .swiper-pagination-bullet
+        width: 10px
+        height: 10px
+        background-color: #dddddd
+        border: solid 1.5px #dedddf
+        border-radius: 50%
+        opacity: 1
+      .swiper-pagination-bullet-active
+        background-color: $font-color
+        border-color: $font-color
+  .buttons
+    margin-top: 72px
+    text-align: center
+    .btn
+      margin: 0 8px 10px
+      position: relative
+      i
+        display: inline-block
+        position: relative
+        top: 4px
+        margin-right: 10px
+    .btn-pink>i
+      width: 17px
+      height: 18px
+      background: url("../images/icon@2x/job-search-black@2x.png") center center no-repeat
+      background-size: 17px 18px
+    .btn-black>i
+      width: 19px
+      height: 20px
+      top: 5px
+      background: url("../images/icon@2x/find-ppl-black@2x.png") center center no-repeat
+      background-size: 19px 20px
+  .work>div
+    margin-top: 60px
+    padding: 0
+    text-align: center
+    div
+      display: inline-block
+      margin: 20px 62px
+      text-align: center
+      h3
+        font-size: 20px
+        font-weight: 500
+        color: $font-color
+        margin-top: 40px
+      p
+        color: #9b9b9b
+        font-size: 13px
+        font-weight: 500
+      img
+        width: 165px
+        height: 165px
+  .add-buttons
+    text-align: center
+    margin-top: 80px
+  .add-buttons>div>div
+      margin: 0px 31px 20px
+      display: inline-block
+      text-align: left
+      width: 487px
+      height: 193px
+      padding: 39px 60px 36px
+      h2
+        font-size: 20px
+        color: $font-color
+        font-weight: 500
+      p
+        font-size: 13px
+        font-weight: 500
+        color: #9b9b9b
+      .clearfix
+        margin-top: 25px
+        div
+          height: 43px
+          line-height: 43px
+          font-size: 14px
+          font-weight: 500
+          color: $font-color
+        .btn
+          width: 193px
+          height: 43px
+          line-height: 43px
+  .add-net
+    background-image: linear-gradient(233deg, #fffefd, #fff6f5)
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.06)
+    border: solid 1px #fbe3e0
+    img
+      margin-right: 17px
+      width: 19px
+      height: 26px
+  .send-work
+    background-image: linear-gradient(122deg, #fcfcfc, #f3f3f3)
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.06)
+    border: solid 1px #e9e9e9
+    img
+      margin-right: 17px
+      width: 25px
+      height: 25px
+
+  .head
+    height: 30px
+    line-height: 30px
+    margin-bottom: 25px
+    h3
+      font-size: 22px
+      margin: 0px
+      font-weight: 500
+      color: $font-color
+    a
+      position: relative
+      color: #9b9b9b
+      font-size: 13px
+      padding-right: 13px
+      font-weight: 500
+      &:after
+        width: 7px
+        height: 12px
+        display: block
+        content: ''
+        background: url("../images/icon@2x/jiantou@2x.png") center center no-repeat
+        background-size: 7px 12px
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        margin: auto 0
+  .new-net
+    padding: 0 20px
+  .new-net>div
+    position: relative
+    max-width: 1036px
+    margin: 80px auto 0
+    .swiper-button-next
+      width: 70px
+      height: 70px
+      background: url("../images/icon@2x/page-btn-icon@2x.png") center center no-repeat
+      background-size: 70px
+      top: 47%
+      right: -33px
+    .swiper-slide
+      width: 230px
+      height: 267px
+      margin-top: 0px!important
+      margin-bottom: 30px
+      .info
+        font-size: 14px
+        margin-top: 15px
+        h4
+          font-size: 18px
+          font-weight: 500
+          margin: 0
+        i
+          font-style: normal
+        img
+          width: 14px
+          height: 13px
+          position: relative
+          top: -2px
+          right: 5px
+      a
+        color: $font-color
+      a>img
+        display: block
+        border-radius: 2px
+        width: 230px
+        height: 230px
+  .hot-work
+    padding: 0 20px
+  .hot-work>div
+    position: relative
+    max-width: 1036px
+    margin: 70px auto 0
+    .list>li
+      margin-right: 44px
+      margin-bottom: 40px
+      width: 314px
+      height: 339px
+      float: left
+      overflow: hidden
+      img
+        width: 314px
+        height: 206px
+        border-radius: 2px
+      .info
+        margin-top: 17px
+        .sub-title
+          .pull-left
+            color: #4a4a4a
+            font-size: 14px
+            font-weight: 500
+          .pull-right
+            color: #9b9b9b
+            font-size: 13px
+            font-weight: 500
+            i
+              width: 8px
+              height: 14px
+              display: inline-block
+              background: url("../images/icon@2x/position@2x.png") 0 0 no-repeat
+              background-size: 8px 14px
+              float: left
+              margin-top: 3px
+              margin-right: 9px
+      h3
+        font-size: 18px
+        font-weight: 500
+        color: $font-color
+        margin-top: 6px
+        margin-bottom: 12px
+      p
+        color: #525252
+        font-size: 14px
+        margin-bottom: 0px
+    .list>li:nth-child(3n+0)
+      margin-right: 0
+
+
+// 登陆+注册
+.login-register
+  width: 100%
+  height: 100%
+  display: block
+  overflow: hidden
+  background: #3e3e3f url("../images/login-bg@2x.png") 0 0 no-repeat
+  background-size: 100%
+  h1
+    position: absolute
+    top: 18px
+    left: 34px
+    margin: 0
+  .content
+    width: 643px
+    height: 540px
+    border-radius: 5px
+    background-color: #ffffff
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    margin: auto
+    padding: 90px 65px 0
+    h4
+      font-size: 22px
+      font-weight: 500
+      color: $font-color
+    input
+      width: 512px
+      height: 52px
+      line-height: 52px
+      border: solid 1px #dedddf
+      border-radius: 5px
+      background-color: #ffffff
+      margin-bottom: 22px
+      &:first-of-type
+        margin-top: 30px
+      &:last-of-type
+        margin-bottom: 30px
+    input+p
+      margin-bottom: 40px
+    p
+      font-size: 14px
+      font-weight: normal
+      color: $font-color
+      a
+        color: #00559d
+        font-weight: 500
+    .btn
+      padding: 0
+      position: relative
+      width: 512px
+      height: 55px
+      line-height: 55px
+      margin-bottom: 28px
+      i
+        display: block
+        position: absolute
+        left: 22px
+        top: 0
+        bottom: 0px
+        margin: auto 0
+    .btn-pink>i
+      width: 24px
+      height: 33px
+      background: url("../images/icon@2x/girl3@2x.png") 0 0 no-repeat
+      background-size: 24px 33px
+    .btn-black>i
+      width: 33px
+      height: 32px
+      display: block
+      background: url("../images/icon@2x/buildong1@2x.png") 0 0 no-repeat
+      background-size: 33px 32px
+    .btn-blue>i
+      display: inline-block!important
+      position: relative
+      margin-right: 30px
+      top: 5px
+      width: 13px
+      height: 23px
+      display: block
+      background: url("../images/icon@2x/facebook-logo@2x.png") 0 0 no-repeat
+      background-size: 13px 23px
+    .btn-instagram
+      color: #fff
+      background-image: linear-gradient(to right, #f57b36, #e95453 32%, #d2357f 67%, #bd32a3)
+      i
+        display: inline-block!important
+        position: relative
+        margin-right: 30px
+        top: 6px
+        width: 23px
+        height: 23px
+        display: block
+        background: url("../images/icon@2x/instagram@2x.png") 0 0 no-repeat
+        background-size: 23px 23px
+    .pages
+      padding: 10px 0
+      overflow: hidden
+      overflow-y: auto
+      width: 512px
+      height: 163px
+      border-radius: 5px
+      border: solid 1px #dedddf
+      margin: 30px auto 40px
+      label
+        display: block
+        cursor: pointer
+        width: 100%
+        height: 31px
+        line-height: 31px
+        color: $font-color
+        font-size: 14px
+        font-weight: 500
+        padding-left: 14px
+      input
+        display: none
+      input:checked+label
+        background-color: #f3f3f3
+
+
+
+
+    .line
+      margin: 2px 0 20px 0
+  .qualified
+    text-align: center
+    width: 494px
+    height: 415px
+    border-radius: 5px
+    background-color: #ffffff
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    color: $font-color
+    margin: auto
+    padding-top: 108px
+    h2
+      margin: 0
+      font-size: 22px
+      font-weight: 500
+      padding-bottom: 30px
+    p
+      font-size: 14px
+      margin-bottom: 0
+      font-weight: normal
+    .btn
+      margin-top: 40px
+      width: 325px
+      height: 52px
+      line-height: 52px
+      color: #fff
+      padding: 0
+      font-size: 14px
+      font-weight: 500
+      border-radius: 5px
+      background-color: #58bd2f
+      &:hover
+        background-color: #4abd6b
+      &:active
+        background-color: #4BA329
+      i
+        display: inline-block!important
+        position: relative
+        margin-right: 10px
+        top: 5px
+        width: 25px
+        height: 23px
+        display: block
+        background: url("../images/icon@2x/LINE_Icon_RGB@2x.png") 0 0 no-repeat
+        background-size: 25px 23px
+
+.register
+  margin-top: 58px
+  padding-bottom: 58px
+  width: 100%
+  height: 100%
+  overflow: hidden
+  overflow-y: auto
+  .header
+    overflow: hidden
+    position: absolute
+    z-index: 99
+    top: 0
+    left: 0
+    width: 100%
+    height: 58px
+    background-color: #f9f9f9
+    h1
+      height: 25px
+      position: absolute
+      top: 0
+      bottom: 0
+      margin: auto 34px
+      img
+        width: 152px
+        height: 25px
+        display: block
+  .footer
+    width: 100%
+    height: 307px
+    background-color: #2b2b2d
+    .con
+      text-align: center
+      overflow: hidden
+      width: 1200px
+      height: 100%
+      margin: 0 auto
+      >img
+        display: block
+        margin: 40px auto 40px
+      >a
+        font-size: 13px
+        font-weight: 500
+        color: #b9b9b9
+        margin: 0 20px
+      >div
+        margin-bottom: 8px
+        >span
+          color: #fff
+          font-size: 13px
+          margin-right: 15px
+          line-height: 18px
+          font-weight: 500
+          a
+            color: #fff
+            img
+              margin-left: 15px
+              position: relative
+              top: -2px
+      .line
+        margin-top: 25px
+        margin-bottom: 30px
+  .content
+    width: 512px
+    overflow: hidden
+    margin: 0 auto
+    h3
+      margin-top: 50px
+      font-size: 22px
+      font-weight: 500
+      color: #2b2b2d
+      img
+        margin-top: 5px
+    h3+p
+      font-size: 14px
+      font-weight: normal
+      color: $font-color
+      margin-top: 3px
+    .user-info
+      margin-top: 40px
+      text-align: center
+      .input-group
+        position: relative
+        width: 163px
+        height: 50px
+        margin: 20px auto 7px
+        &::after
+          display: block
+          content: '編輯'
+          color: #b9b9b9
+          font-size: 14px
+          position: absolute
+          right: 10px
+          top: 15px
+        input
+          background: none
+          height: 50px
+          border-radius: 5px
+          line-height: 50px
+      p
+        font-size: 14px
+        font-weight: 500
+        margin-bottom: 3px
+    .required-tips
+      font-size: 14px
+      font-weight: normal
+      color: #b9b9b9
+      margin-top: 20px
+      margin-bottom: 16px
+    .input-group
+      width: 100%
+      margin-bottom: 40px
+      .tip1
+        font-size: 14px
+        font-weight: normal
+        color: #b9b9b9
+      .city>select
+        width: 160px
+        display: block
+        height: 50px
+        line-height: 50px
+        display: inline-block
+        margin-right: 15px!important
+        overflow: hidden
+      .select2
+        margin-bottom: 20px
+        margin-right: 15px
+      .select2,.select2 .selection,.select2-selection--single,.select2-selection__rendered,.select2-selection__arrow
+        height: 50px
+        outline: none
+        line-height: 50px
+      .select2-selection--single
+        border: solid 1px #dedddf
+      input
+        border-radius: 5px
+        height: 50px
+        line-height: 50px
+      label
+        font-size: 14px
+        font-weight: normal
+        color: $font-color
+        span.tip
+          color: #b9b9b9
+          margin-left: 5px
+      i
+        font-size: 16px
+        font-weight: 500
+        color: #fbdbd7
+        position: relative
+        top: 3px
+      .checkbox-list
+        margin-top: 15px
+        label
+          margin-right: 8px
+          float: left
+          margin-top: 0
+          margin-bottom: 10px
+          &:nth-of-type(6n+0)
+            margin-right: 0
+      .input
+        position: relative
+        height: 50px
+        &::before
+          display: block
+          width: 30px
+          height: 30px
+          position: absolute
+          content: ''
+          top: 0
+          background: url("../images/icon@2x/yes-icon@2x.png") 0 0 no-repeat
+          background-size: 30px 30px
+          bottom: 0
+          z-index: 99
+          margin: auto 0
+        input
+          padding-left: 41px
+          width: 469px
+          height: 50px
+          border: 0px
+          border-bottom: 1px solid #dedddf
+          box-shadow: none
+          border-radius: 0
+        span
+          display: block
+          width: 28px
+          height: 28px
+          background: url("../images/icon@2x/add-icon@2x.png") 0 0 no-repeat
+          background-size: 28px 28px
+          position: absolute
+          right: 0px
+          bottom: 0
+          z-index: 99
+          margin: auto 0
+        span.on
+          background: url("../images/icon@2x/del-icon@2x.png") 0 0 no-repeat
+          background-size: 28px 28px
+
+      .input.on::before
+        background: url("../images/icon@2x/yes1-icon@2x.png") 0 0 no-repeat
+        background-size: 30px 30px
+      .www
+        margin: 5px 0
+        overflow: hidden
+        float: left
+        img
+          width: 30px
+          height: 30px
+          float: left
+          margin-top: 10px
+          margin-right: 30px
+        input
+          width: 443px
+          float: left
+      .photos
+        margin-top: 10px
+        .photo
+          float: left
+          margin-right: 25px
+          margin-bottom: 25px
+          width: 154px
+          height: 154px
+          position: relative
+          img
+            z-index: 2
+            position: absolute
+            top: 0
+            border-radius: 5px
+            left: 0
+            width: 100%
+            height: 100%
+          .file-btn
+            z-index: 3
+            width: 27px
+            cursor: pointer
+            height: 27px
+            display: block
+            position: absolute
+            bottom: 5px
+            right: 5px
+            background: url("../images/icon@2x/file-btn1@2x.png") 0 0 no-repeat
+            background-size: 27px 27px
+            input
+              display: block
+              opacity: 0
+              width: 100%
+              height: 100%
+              font-size: 100px
+          &:nth-child(3n+0)
+            margin-right: 0
+      .desc
+        margin-top: 10px
+        padding: 38px 10px
+        width: 100%
+        height: 257px
+        background-color: #f3f3f3
+        p
+          margin-bottom: 0px
+          font-size: 14px
+          font-weight: normal
+          color: $font-color
+          line-height: 1.43
+    .input-group.complete
+      margin-bottom: 70px
+      color: #01579b
+    .input-group.phone
+      input
+        width: 335px
+        float: left
+        border-radius: 5px
+      >span
+        width: 177px
+        float: left
+        line-height: 50px
+        padding-left: 20px
+        label::before
+          display: inline-block
+          width: 17px
+          height: 17px
+          content: ''
+          background: url("../images/icon@2x/help-with-circle@2x.png") 0 0 no-repeat
+          background-size: 17px 17px
+          position: relative
+          right: 5px
+          top: 3px
+    .input-group.birthday
+      margin-top: 30px
+      label
+        height: 50px
+        line-height: 50px
+        float: left
+        margin-right: 10px
+      .select2
+        float: left
+        margin-right: 16px
+      input
+        width: 64px
+        float: left
+        text-align: center
+        display: block
+        border: solid 1px #dedddf
+      input+span
+        float: left
+        line-height: 50px
+        margin-left: 21px
+    .input-group.height,.input-group.weight
+      >label
+        margin-bottom: 10px
+      .checkbox-xs
+        margin-right: 30px
+        margin-bottom: 15px
+        &:nth-of-type(6n+0)
+          margin-right: 0
+    .btn
+      width: 100%
+      height: 55px
+      line-height: 55px
+      margin-bottom: 215px
+    .jump
+      font-size: 14px
+      color: $font-color
+      font-weight: 500
+      width: 30px
+      display: block
+      margin: 20px auto
+
+
+// 網美註冊3-1body
+.net-register-sorry
+  text-align: center
+  color: $font-color
+  h3
+    font-size: 22px
+    font-weight: 500
+    margin-top: 31px
+    margin-bottom: 20px
+  p
+    margin-bottom: 25px
+  .btn
+    width: 275px
+    height: 55px
+    line-height: 55px
+    margin-top: 17px
+
+
+
+
+//主体内容结束
+
+//desktop
+.desktop
+  color: #fff
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  left: 0
+  background-color: #2B2B2D
+  .item
+    width: 320px
+    height: 400px
+    position: absolute
+    text-align: center
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+    h3
+      font-size: 24px
+      font-weight: 500
+      line-height: 39px
+      margin-bottom: 33px
+    img:first-of-type
+      margin-bottom: 46px
+    img:last-of-type
+      margin-bottom: 27px
+    a
+      color: #fff
+      font-size: 12px
+      display: block
+
