@@ -78,6 +78,9 @@ input:checked + label.checkbox-xs::before {
   background: url("../images/icon@2x/checkbox-checked@2x.png") 0 0 no-repeat;
   background-size: 17px 17px; }
 
+.btn {
+  font-weight: 500; }
+
 .btn.disabled {
   background-color: #9b9b9b;
   color: #fff; }
@@ -258,11 +261,17 @@ nav {
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2); }
   nav #logo {
     width: 100%;
-    height: 58px; }
+    height: 58px;
+    position: relative; }
     nav #logo a {
       width: 152px;
       height: 25px;
       display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0px;
+      left: 0px;
+      right: 0;
       margin: auto;
       background: url("../images/MATCH-LOGO-02@2x.png") 0 0 no-repeat;
       background-size: 152px 25px; }
@@ -271,15 +280,10 @@ nav {
     margin-bottom: 8px; }
     nav .nav-list > li ul {
       display: none; }
-      nav .nav-list > li ul li {
-        padding-left: 64px;
-        margin-bottom: 30px; }
-        nav .nav-list > li ul li a {
-          color: #2b2b2d;
-          font-size: 14px; }
-    nav .nav-list > li ul > li:first-child {
-      margin-top: 25px; }
-  nav .nav-list > li > a::after {
+      nav .nav-list > li ul li a {
+        color: #2b2b2d;
+        font-size: 14px; }
+  nav .nav-list li a::after {
     width: 90%;
     height: 2px;
     display: none;
@@ -290,13 +294,13 @@ nav {
     left: 0px;
     right: 0px;
     margin: 0 auto; }
-  nav .nav-list > li.on > a {
+  nav .nav-list li.on > a {
     background-color: #DEDDDF; }
-    nav .nav-list > li.on > a i {
+    nav .nav-list li.on > a i {
       transform: rotate(0deg); }
-  nav .nav-list > li.on > a::after {
+  nav .nav-list li.on > a::after {
     display: block; }
-  nav .nav-list > li > a {
+  nav .nav-list li a {
     padding-left: 63px;
     display: block;
     width: 100%;
@@ -306,14 +310,14 @@ nav {
     font-weight: 500;
     color: #2b2b2d;
     line-height: 44px; }
-    nav .nav-list > li > a img {
+    nav .nav-list li a img {
       position: absolute;
       display: block;
       left: 25px;
       top: 0px;
       bottom: 0px;
       margin: auto 0; }
-    nav .nav-list > li > a i {
+    nav .nav-list li a i {
       display: block;
       width: 12px;
       height: 7px;
@@ -325,9 +329,9 @@ nav {
       right: 20px;
       margin: auto 0;
       transform: rotate(90deg); }
-    nav .nav-list > li > a:hover {
+    nav .nav-list li a:hover {
       background-color: #DEDDDF; }
-      nav .nav-list > li > a:hover::after {
+      nav .nav-list li a:hover::after {
         display: block; }
   nav .nav-footer {
     height: 178px;
@@ -830,6 +834,7 @@ header {
     padding: 90px 65px 0; }
     .login-register .content h4 {
       font-size: 22px;
+      margin-bottom: 5px;
       font-weight: 500;
       color: #2b2b2d; }
     .login-register .content input {
@@ -1246,7 +1251,7 @@ header {
       float: left;
       line-height: 50px;
       padding-left: 20px; }
-      .register .content .input-group.phone > span label::before {
+      .register .content .input-group.phone > span label.help::before {
         display: inline-block;
         width: 17px;
         height: 17px;

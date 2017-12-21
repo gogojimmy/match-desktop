@@ -49,7 +49,9 @@ $(function(){
     // search end
 
     // select2 run
-    $("select").select2({minimumResultsForSearch: -1,style: 'height: 50px'});
+    if($("select").length > 0){
+        $("select").select2({minimumResultsForSearch: -1,style: 'height: 50px'});
+    }
 
     // 網美寫履歷3-經歷
     $(".input span").on('click', function(){
