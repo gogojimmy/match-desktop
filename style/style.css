@@ -1,5 +1,6 @@
 @charset "UTF-8";
 html, body {
+  font-family: PingFangTC;
   width: 100%;
   height: 100%;
   overflow: hidden; }
@@ -169,6 +170,7 @@ input:checked + label.checkbox-xs::before {
     background-color: #FACEC8; }
 
 .btn-photo {
+  cursor: pointer;
   display: block;
   margin: 0 auto;
   width: 106px;
@@ -178,6 +180,7 @@ input:checked + label.checkbox-xs::before {
   background-color: #f3f3f3;
   border: solid 1px #dedddf; }
   .btn-photo img {
+    cursor: pointer;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -188,6 +191,7 @@ input:checked + label.checkbox-xs::before {
     margin: auto;
     z-index: 8; }
   .btn-photo input {
+    cursor: pointer;
     width: 100%;
     height: 100%;
     display: block;
@@ -201,10 +205,11 @@ input:checked + label.checkbox-xs::before {
     margin: auto;
     z-index: 10; }
   .btn-photo i {
+    cursor: pointer;
     width: 28px;
     height: 28px;
     display: block;
-    position: absolute;
+    position: absolute !important;
     top: 0;
     bottom: 0px;
     left: 0px;
@@ -249,8 +254,87 @@ ul {
   width: 100%;
   margin: 0 auto; }
 
+.select2 {
+  margin-bottom: 20px !important;
+  margin-right: 15px !important; }
+  .select2 .select2 .selection, .select2 .select2-selection--single, .select2 .select2-selection__rendered, .select2 .select2-selection__arrow {
+    height: 50px !important;
+    outline: none !important;
+    line-height: 50px !important; }
+  .select2 .select2-selection--single {
+    border: solid 1px #dedddf !important; }
+
+.photos {
+  margin-top: 10px; }
+  .photos .photo {
+    cursor: pointer;
+    background: #f3f3f3 url("../images/icon@2x/file-add@2x.png") center center no-repeat;
+    background-size: 27px 27px;
+    border-radius: 5px;
+    border: solid 1px #dedddf;
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    width: 154px;
+    height: 154px;
+    position: relative; }
+    .photos .photo img {
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      border-radius: 5px;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+    .photos .photo .file-btn {
+      z-index: 3;
+      cursor: pointer;
+      width: 27px;
+      cursor: pointer;
+      height: 27px;
+      display: block;
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      background: url("../images/icon@2x/file-btn1@2x.png") 0 0 no-repeat;
+      background-size: 27px 27px; }
+      .photos .photo .file-btn input {
+        cursor: pointer;
+        display: block;
+        opacity: 0;
+        width: 100% !important;
+        height: 100% !important;
+        font-size: 100px; }
+    .photos .photo:nth-child(3n+0) {
+      margin-right: 0; }
+
+.photos1 .photo {
+  margin-right: 16px;
+  width: 101px;
+  height: 101px; }
+  .photos1 .photo .file-btn {
+    top: 0;
+    left: 0;
+    background: none;
+    width: 100% !important;
+    height: 100% !important; }
+  .photos1 .photo .del {
+    z-index: 99;
+    width: 27px;
+    height: 27px;
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: url("../images/icon@2x/removePhoto@2x.png") 0 0 no-repeat;
+    background-size: 27px 27px; }
+  .photos1 .photo:nth-child(3n+0) {
+    margin-right: 16px; }
+  .photos1 .photo:nth-child(4n+0) {
+    margin-right: 0; }
+
 nav {
-  z-index: 9;
+  z-index: 99;
   width: 220px;
   height: 100%;
   display: block;
@@ -375,7 +459,7 @@ nav {
 
 header {
   padding-right: 220px;
-  z-index: 8;
+  z-index: 98;
   height: 58px;
   width: 100%;
   position: absolute;
@@ -440,7 +524,7 @@ header {
       background-color: #c62828; }
 
 .search {
-  z-index: 6;
+  z-index: 97;
   position: absolute;
   top: -1000px;
   left: 0;
@@ -1103,20 +1187,19 @@ header {
         display: inline-block;
         margin-right: 15px !important;
         overflow: hidden; }
-      .register .content .input-group .select2 {
-        margin-bottom: 20px;
-        margin-right: 15px; }
-      .register .content .input-group .select2, .register .content .input-group .select2 .selection, .register .content .input-group .select2-selection--single, .register .content .input-group .select2-selection__rendered, .register .content .input-group .select2-selection__arrow {
-        height: 50px;
-        outline: none;
-        line-height: 50px; }
-      .register .content .input-group .select2-selection--single {
-        border: solid 1px #dedddf; }
+      .register .content .input-group textarea {
+        width: 100%;
+        height: 139px;
+        border-radius: 5px;
+        background-color: #ffffff;
+        border: solid 1px #dedddf;
+        resize: none; }
       .register .content .input-group input {
         border-radius: 5px;
         height: 50px;
         line-height: 50px; }
       .register .content .input-group label {
+        margin-bottom: 7px;
         font-size: 14px;
         font-weight: normal;
         color: #2b2b2d; }
@@ -1170,6 +1253,7 @@ header {
           position: absolute;
           right: 0px;
           bottom: 0;
+          top: 0;
           z-index: 99;
           margin: auto 0; }
         .register .content .input-group .input span.on {
@@ -1191,42 +1275,13 @@ header {
         .register .content .input-group .www input {
           width: 443px;
           float: left; }
-      .register .content .input-group .photos {
-        margin-top: 10px; }
-        .register .content .input-group .photos .photo {
-          float: left;
-          margin-right: 25px;
-          margin-bottom: 25px;
-          width: 154px;
-          height: 154px;
-          position: relative; }
-          .register .content .input-group .photos .photo img {
-            z-index: 2;
-            position: absolute;
-            top: 0;
-            border-radius: 5px;
-            left: 0;
-            width: 100%;
-            height: 100%; }
-          .register .content .input-group .photos .photo .file-btn {
-            z-index: 3;
-            width: 27px;
-            cursor: pointer;
-            height: 27px;
-            display: block;
-            position: absolute;
-            bottom: 5px;
-            right: 5px;
-            background: url("../images/icon@2x/file-btn1@2x.png") 0 0 no-repeat;
-            background-size: 27px 27px; }
-            .register .content .input-group .photos .photo .file-btn input {
-              display: block;
-              opacity: 0;
-              width: 100%;
-              height: 100%;
-              font-size: 100px; }
-          .register .content .input-group .photos .photo:nth-child(3n+0) {
-            margin-right: 0; }
+        .register .content .input-group .www span {
+          margin-right: 15px;
+          height: 50px;
+          line-height: 50px;
+          font-size: 14px;
+          font-weight: normal;
+          color: #2b2b2d; }
       .register .content .input-group .desc {
         margin-top: 10px;
         padding: 38px 10px;
@@ -1273,6 +1328,7 @@ header {
         margin-right: 16px; }
       .register .content .input-group.birthday input {
         width: 64px;
+        border-radius: 5px;
         float: left;
         text-align: center;
         display: block;
@@ -1300,6 +1356,32 @@ header {
       width: 30px;
       display: block;
       margin: 20px auto; }
+    .register .content .certificates {
+      width: 100%;
+      height: 139px;
+      border: solid 1px #dedddf;
+      position: relative;
+      border-radius: 5px;
+      background: #f3f3f3 url("../images/icon@2x/file-add@2x.png") center center no-repeat;
+      background-size: 26px 26px;
+      cursor: pointer; }
+      .register .content .certificates input {
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        left: 0px;
+        font-size: 100%;
+        opacity: 0;
+        top: 0px; }
+      .register .content .certificates img {
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px; }
 
 .net-register-sorry {
   text-align: center;
@@ -1310,12 +1392,140 @@ header {
     margin-top: 31px;
     margin-bottom: 20px; }
   .net-register-sorry p {
+    margin-bottom: 0px; }
+  .net-register-sorry .mb25 {
     margin-bottom: 25px; }
+  .net-register-sorry .mb28 {
+    margin-bottom: 28px; }
   .net-register-sorry .btn {
     width: 275px;
     height: 55px;
     line-height: 55px;
     margin-top: 17px; }
+
+.send-work-page {
+  width: 592px;
+  margin: 0 auto; }
+  .send-work-page h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #2b2b2d;
+    margin: 39px 0 47px; }
+    .send-work-page h2 ~ p {
+      font-size: 16px;
+      font-weight: normal;
+      color: #b9b9b9; }
+  .send-work-page .input-group {
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 40px; }
+    .send-work-page .input-group > .goods {
+      height: 54px;
+      position: relative;
+      margin-bottom: 10px; }
+      .send-work-page .input-group > .goods > span {
+        display: block;
+        width: 28px;
+        height: 28px;
+        background: url("../images/icon@2x/add-icon@2x.png") 0 0 no-repeat;
+        background-size: 28px 28px;
+        position: absolute;
+        right: 20px;
+        top: 0;
+        bottom: 0;
+        z-index: 9;
+        margin: auto 0; }
+      .send-work-page .input-group > .goods > span.on {
+        background: url("../images/icon@2x/del-icon@2x.png") 0 0 no-repeat;
+        background-size: 28px 28px; }
+    .send-work-page .input-group input {
+      width: 100%;
+      border-radius: 5px !important;
+      height: 54px;
+      line-height: 54px; }
+    .send-work-page .input-group .select2 {
+      margin-bottom: 10px !important; }
+      .send-work-page .input-group .select2:nth-of-type(2n+0) {
+        margin-right: 0 !important; }
+    .send-work-page .input-group .select2-selection__arrow {
+      margin-right: 10px; }
+      .send-work-page .input-group .select2-selection__arrow b {
+        border-color: rgba(136, 136, 136, 0) !important; }
+    .send-work-page .input-group input.icon-down, .send-work-page .input-group .select2-selection__arrow {
+      background: url("../images/icon@2x/chevron-small-down@2x.png") 96% center no-repeat;
+      background-size: 16px 8px; }
+    .send-work-page .input-group .start-date, .send-work-page .input-group .end-date {
+      display: none; }
+    .send-work-page .input-group label {
+      font-size: 16px;
+      font-weight: normal;
+      color: #2b2b2d;
+      margin-bottom: 10px; }
+      .send-work-page .input-group label i {
+        font-size: 16px;
+        font-weight: 500;
+        font-style: normal;
+        color: #fbdbd7;
+        margin-left: 5px; }
+      .send-work-page .input-group label .tip {
+        color: #b9b9b9;
+        margin-left: 10px; }
+    .send-work-page .input-group .checkbox-box > label {
+      float: left;
+      margin-top: 0;
+      margin-right: 7px;
+      margin-bottom: 15px; }
+      .send-work-page .input-group .checkbox-box > label:nth-of-type(7n+0) {
+        margin-right: 0; }
+    .send-work-page .input-group .checkbox-cos {
+      width: 100%;
+      height: 54px;
+      line-height: 54px;
+      border-radius: 5px;
+      background-color: #ffffff;
+      border: solid 1px #dedddf;
+      display: block;
+      padding: 0 15px;
+      font-size: 16px;
+      font-weight: normal;
+      color: #2b2b2d;
+      cursor: pointer; }
+    .send-work-page .input-group input:checked + label.checkbox-cos {
+      background: #fbdbd7 url("../images/icon@2x/checked-2@2x.png") 97% center no-repeat;
+      background-size: 18px 14px; }
+    .send-work-page .input-group .cos-city {
+      display: none; }
+  .send-work-page .price-select > .select2 {
+    display: none; }
+  .send-work-page input.ren {
+    display: none;
+    background: url("../images/ren.png") 96% center no-repeat;
+    background-size: 16px 16px; }
+  .send-work-page .where {
+    width: 276px;
+    float: left;
+    overflow: hidden; }
+  .send-work-page .net-style > input {
+    margin-bottom: 10px; }
+  .send-work-page .photo {
+    margin-right: 28px;
+    width: 178px;
+    height: 178px;
+    border-radius: 1px;
+    border: none; }
+    .send-work-page .photo:nth-child(3n+0) {
+      margin-right: 0; }
+    .send-work-page .photo img {
+      border-radius: 1px; }
+  .send-work-page .btn {
+    width: 276px;
+    float: left;
+    margin-bottom: 98px;
+    margin-top: 34px;
+    height: 55px;
+    line-height: 55px; }
+    .send-work-page .btn:first-of-type {
+      margin-right: 40px; }
 
 .desktop {
   color: #fff;

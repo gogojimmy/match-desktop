@@ -95,6 +95,72 @@ $(function(){
             self.parent().removeClass('on');
         }
     }
+    // 删除相關照片操作
+    $(".photos1 .photo .del").on('click', function(){
+        $(this).hide();
+        $(this).siblings('img').remove();
+    });
+
+    // 发布工作
+    $(".send-work-page .input-group input").on('blur', function(){
+        if($(this).val()){
+            $(this).siblings().addClass('on');
+        }else{
+            $(this).siblings().removeClass('on');
+        }
+    })
+    // 合作時間
+    $(".send-work-page .cooperation-date").on('change', function(){
+        if($(this).val()==1){
+            $(this).siblings('input').show();
+        }else{
+            $(this).siblings('input').hide();
+        }
+    })
+    if($(".send-work-page").length > 0){
+        $('.send-work-page .start-date').datepicker({
+            language: "zh-CN",
+            format: 'yyyy/mm/dd' + '開始'
+        });
+        $('.send-work-page .end-date').datepicker({
+            language: "zh-CN",
+            format: 'yyyy/mm/dd' + '結束'
+        });
+    }
+    // 地点
+    $("#place").on('change', function(){
+        if($(this).context.checked){
+            $(".cos-city").show();
+        }else{
+            $(".cos-city").hide();
+        }
+    });
+    //合作費用
+    $("#price").on('change', function(){
+        if($(this).context.checked){
+            $(this).siblings('.select2').css('display', 'block');
+        }else{
+            $(this).siblings('.select2').css('display', 'none');
+        }
+    });
+    // 贊助商品
+    $("#goods").on('change', function(){
+        if($(this).context.checked){
+            $(this).siblings('.goods').show();
+        }else{
+            $(this).siblings('.goods').hide();
+        }
+    });
+    // 需求人數
+    $("#ren-number").on('change', function(){
+        if($(this).val()==1){
+            $('.ren').show();
+        }else{
+            $('.ren').hide();
+        }
+    })
+
+
 
 
 

@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>header</title>
+    <title>發布工作1</title>
     <link href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/select2/dist/css/select2.css" rel="stylesheet">
+    <link href="lib/bootstrap-datepicker-1.6.4/css/bootstrap-datepicker.min.css" rel="stylesheet">
     <link href="style/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -347,12 +349,250 @@
 
 <!--主体内容 开始-->
 <div class="container">
+    <div class="send-work-page">
+        <h2>發佈您的工作</h2>
+        <p>* 必填欄位</p>
+        <form action="">
+            <div class="input-group">
+                <label>工作名稱 <i>*</i></label>
+                <input type="text"  class="form-control">
+            </div>
+            <div class="input-group">
+                <label>合作內容 <i>*</i></label>
+                <div class="goods">
+                    <input type="text" placeholder="在痞客邦撰寫一篇開箱文"  class="form-control">
+                    <span></span>
+                </div>
+                <div class="goods">
+                    <input type="text" placeholder="在痞客邦撰寫一篇開箱文"  class="form-control">
+                    <span></span>
+                </div>
+            </div>
+            <div class="input-group">
+                <label>合作商品 <i>*</i></label>
+                <div class="goods">
+                    <input type="text" placeholder="名稱"  class="form-control">
+                    <span></span>
+                </div>
+                <div class="goods">
+                    <input type="text" placeholder="名稱"  class="form-control">
+                    <span></span>
+                </div>
+            </div>
+            <div class="input-group">
+                <label>商品類型 <i>*</i></label>
+                <div class="checkbox-box">
+                    <input checked id="c-d-1" type="checkbox">
+                    <label for="c-d-1" class="checkbox">美妝</label>
+                    <input checked id="c-d-2" type="checkbox">
+                    <label for="c-d-2" class="checkbox">保養</label>
+                    <input id="c-d-3" type="checkbox">
+                    <label for="c-d-3" class="checkbox">穿搭</label>
+                    <input id="c-d-4" type="checkbox">
+                    <label for="c-d-4" class="checkbox">美容美髮</label>
+                    <input id="c-d-5" type="checkbox">
+                    <label for="c-d-5" class="checkbox">包包</label>
+                    <input id="c-d-6" type="checkbox">
+                    <label for="c-d-6" class="checkbox">女鞋</label>
+                    <input id="c-d-7" type="checkbox">
+                    <label for="c-d-7" class="checkbox">美妝</label>
+                    <input id="c-d-8" type="checkbox">
+                    <label for="c-d-8" class="checkbox">保養</label>
+                    <input id="c-d-9" type="checkbox">
+                    <label for="c-d-9" class="checkbox">包包</label>
+                    <input id="c-d-10" type="checkbox">
+                    <label for="c-d-10" class="checkbox">女鞋</label>
+                    <input id="c-d-11" type="checkbox">
+                    <label checked for="c-d-11" class="checkbox">美妝</label>
+                    <input id="c-d-12" type="checkbox">
+                    <label for="c-d-12" class="checkbox">其他</label>
+                    <input id="c-d-13" type="checkbox">
+                    <label for="c-d-13" class="checkbox">廣告</label>
+                    <input id="c-d-14" type="checkbox">
+                    <label for="c-d-14" class="checkbox">外拍</label>
+                </div>
+            </div>
+            <div class="input-group">
+                <label>商品網址 <span class="tip">可附上商品網址，便於網美參考</span></label>
+                <input type="text"  placeholder="https://" class="form-control">
+            </div>
+            <div class="input-group">
+                <label>合作時間 <i>*</i></label>
+                <span class="clearfix"></span>
+                <select class="cooperation-date" style="width: 100%" name="">
+                    <option value="0">不限</option>
+                    <option value="1">短期</option>
+                </select>
+                <span class="clearfix"></span>
+                <input style="width:286px;" type="text" placeholder="開始" class="form-control icon-down start-date">
+                <input style="width:286px;" type="text" placeholder="結束" class="form-control icon-down end-date">
+            </div>
+            <div class="input-group">
+                <label>合作地點 <span class="tip">可複選</span></label>
+                <input type="checkbox" id="net">
+                <label class="checkbox-cos" for="net">網路</label>
+                <input type="checkbox" id="place">
+                <label class="checkbox-cos" for="place">地點</label>
+                <div class="cos-city">
+                    <select style="width:286px;margin-right:18px" class="form-control" name="" >
+                        <option>台北市</option>
+                        <option>台中市</option>
+                    </select>
+                    <select style="width:286px" class="form-control" name="" >
+                        <option>中山區</option>
+                        <option>中山區</option>
+                    </select>
+                    <input placeholder="街道或位置" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="input-group">
+                <label>合作方式 <i>*</i></label>
+                <div class="checkbox-box">
+                    <input checked id="c-d-b-1" type="checkbox">
+                    <label for="c-d-b-1" class="checkbox">美妝</label>
+                    <input checked id="c-d-b-2" type="checkbox">
+                    <label for="c-d-b-2" class="checkbox">保養</label>
+                    <input id="c-d-b-3" type="checkbox">
+                    <label for="c-d-b-3" class="checkbox">穿搭</label>
+                    <input id="c-d-b-4" type="checkbox">
+                    <label for="c-d-b-4" class="checkbox">美容美髮</label>
+                    <input id="c-d-b-5" type="checkbox">
+                    <label for="c-d-b-5" class="checkbox">包包</label>
+                    <input id="c-d-b-6" type="checkbox">
+                    <label for="c-d-b-6" class="checkbox">女鞋</label>
+                    <input id="c-d-b-7" type="checkbox">
+                    <label for="c-d-b-7" class="checkbox">美妝</label>
+                </div>
+            </div>
+            <div class="input-group">
+                <label>社群媒體 <i>*</i> <span class="tip">此工作可以合作的社群媒體有哪些？</span></label>
+                <div class="checkbox-box">
+                    <input checked id="c-d-e-1" type="checkbox">
+                    <label for="c-d-e-1" class="checkbox">美妝</label>
+                    <input checked id="c-d-e-2" type="checkbox">
+                    <label for="c-d-e-2" class="checkbox">保養</label>
+                    <input id="c-d-e-3" type="checkbox">
+                    <label for="c-d-e-3" class="checkbox">穿搭</label>
+                    <input id="c-d-e-4" type="checkbox">
+                    <label for="c-d-e-4" class="checkbox">美容美髮</label>
+                    <input id="c-d-e-5" type="checkbox">
+                    <label for="c-d-e-5" class="checkbox">包包</label>
+                    <input id="c-d-e-6" type="checkbox">
+                    <label for="c-d-e-6" class="checkbox">女鞋</label>
+                    <input id="c-d-e-7" type="checkbox">
+                    <label for="c-d-e-7" class="checkbox">美妝</label>
+                </div>
+            </div>
+            <div class="input-group price-select">
+                <label>合作待遇 <i>*</i><span class="tip">可複選</span></label>
+                <input type="checkbox" id="price">
+                <label class="checkbox-cos" for="price">合作費用</label>
+                <select name="" id="" class="form-control" style="width:100%">
+                    <option>兩千以下</option>
+                    <option>兩千以上</option>
+                </select>
+                <input type="checkbox" id="goods">
+                <label class="checkbox-cos" for="goods">贊助商品</label>
+                <div class="goods" style="display: none">
+                    <input type="text" class="form-control" placeholder="請填寫提供的商品或服務內容及數量">
+                    <span></span>
+                </div>
+            </div>
+            <div class="input-group">
+                <label>是否公開 <i>*</i></label>
+                <select  class="form-control" style="width:100%">
+                    <option>公開合作待遇</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>需求人數 <i>*</i></label>
+                <select id="ren-number"  class="form-control" style="width:100%">
+                    <option value="0">不限</option>
+                    <option value="1">公開合作待遇</option>
+                </select>
+                <input style="width: 296px" type="text" class="form-control ren">
+            </div>
+            <div class="input-group">
+                <label>網美加分條件</label>
+                <div class="clearfix"></div>
+                <div class="where" style="margin-right: 37px">
+                    <label>身高 <span class="tip">(cm)</span></label>
+                    <select style="width:276px;" name="" id="">
+                        <option>150以下</option>
+                    </select>
+                </div>
+                <div class="where">
+                    <label>體重 <span class="tip">(kg)</span></label>
+                    <select style="width:276px;" name="" id="">
+                        <option>40以下</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-group">
+                <label>網美風格 <i>*</i> <span class="tip">此工作有特定的網美風格嗎？</span></label>
+                <div class="checkbox-box">
+                    <input checked id="c-d-g-1" type="checkbox">
+                    <label for="c-d-g-1" class="checkbox">美妝</label>
+                    <input checked id="c-d-g-2" type="checkbox">
+                    <label for="c-d-g-2" class="checkbox">保養</label>
+                    <input id="c-d-g-3" type="checkbox">
+                    <label for="c-d-g-3" class="checkbox">穿搭</label>
+                    <input id="c-d-g-4" type="checkbox">
+                    <label for="c-d-g-4" class="checkbox">美容美髮</label>
+                    <input id="c-d-g-5" type="checkbox">
+                    <label for="c-d-g-5" class="checkbox">包包</label>
+                    <input id="c-d-g-6" type="checkbox">
+                    <label for="c-d-g-6" class="checkbox">女鞋</label>
+                    <input id="c-d-g-7" type="checkbox">
+                    <label for="c-d-g-7" class="checkbox">美妝</label>
+                </div>
+            </div>
+            <div class="input-group net-style">
+                <label>網美風格 <i>*</i> <span class="tip">此工作有特定的網美風格嗎？</span></label>
+                <input type="text" value="陳先生" class="form-control">
+                <input type="text" value=""placeholder="聯絡人市話 02-0000-0000-分機" class="form-control">
+                <input type="text" value="" placeholder="聯絡人手機 0900-000-000" class="form-control">
+            </div>
+            <div class="input-group">
+                <label>相關照片</label>
+                <div class="photos photos1">
+                    <div class="photo">
+                        <img src="images/m1.png" alt="">
+                        <span class="file-btn">
+                            <input type="file" accept="image/*">
+                        </span>
+                        <span class="del"></span>
+                    </div>
+                    <div class="photo">
+                        <img src="images/m2.png" alt="">
+                        <span class="file-btn">
+                            <input type="file" accept="image/*">
+                        </span>
+                        <span class="del"></span>
+                    </div>
+                    <div class="photo">
+                        <img src="images/m3.png" alt="">
+                        <span class="file-btn">
+                            <input type="file" accept="image/*">
+                        </span>
+                        <span class="del"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <button class="btn btn-default">儲存為草稿</button>
+            <button class="btn btn-black">立即發佈工作</button>
 
+        </form>
+    </div>
 </div>
 <!--主体内容 结束-->
 
 <script src="lib/jquery/1.12.4/jquery.min.js"></script>
 <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="lib/select2/dist/js/select2.min.js"></script>
+<script src="lib/bootstrap-datepicker-1.6.4/js/bootstrap-datepicker.min.js"></script>
+<script src="lib/bootstrap-datepicker-1.6.4/locales/bootstrap-datepicker.zh-CN.min.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 // public global start
 $font-color: #2b2b2d
 html,body
+  font-family: PingFangTC
   width: 100%
   height: 100%
   overflow: hidden
@@ -149,6 +150,7 @@ input:checked+label.checkbox-xs::before
   &:active
     background-color: #FACEC8
 .btn-photo
+  cursor: pointer
   display: block
   margin: 0 auto
   width: 106px
@@ -158,6 +160,7 @@ input:checked+label.checkbox-xs::before
   background-color: #f3f3f3
   border: solid 1px #dedddf
   img
+    cursor: pointer
     width: 100%
     height: 100%
     position: absolute
@@ -168,6 +171,7 @@ input:checked+label.checkbox-xs::before
     margin: auto
     z-index: 8
   input
+    cursor: pointer
     width: 100%
     height: 100%
     display: block
@@ -181,10 +185,11 @@ input:checked+label.checkbox-xs::before
     margin: auto
     z-index: 10
   i
+    cursor: pointer
     width: 28px
     height: 28px
     display: block
-    position: absolute
+    position: absolute!important
     top: 0
     bottom: 0px
     left: 0px
@@ -228,12 +233,89 @@ ul
     width: 100%
     margin: 0 auto
 
+.select2
+  margin-bottom: 20px!important
+  margin-right: 15px!important
+  .select2 .selection,.select2-selection--single,.select2-selection__rendered,.select2-selection__arrow
+    height: 50px!important
+    outline: none!important
+    line-height: 50px!important
+  .select2-selection--single
+    border: solid 1px #dedddf!important
+.photos
+  margin-top: 10px
+  .photo
+    cursor: pointer
+    background: #f3f3f3 url("../images/icon@2x/file-add@2x.png") center center no-repeat
+    background-size: 27px 27px
+    border-radius: 5px
+    border: solid 1px #dedddf
+    float: left
+    margin-right: 25px
+    margin-bottom: 25px
+    width: 154px
+    height: 154px
+    position: relative
+    img
+      z-index: 2
+      position: absolute
+      top: 0
+      border-radius: 5px
+      left: 0
+      width: 100%
+      height: 100%
+    .file-btn
+      z-index: 3
+      cursor: pointer
+      width: 27px
+      cursor: pointer
+      height: 27px
+      display: block
+      position: absolute
+      bottom: 5px
+      right: 5px
+      background: url("../images/icon@2x/file-btn1@2x.png") 0 0 no-repeat
+      background-size: 27px 27px
+      input
+        cursor: pointer
+        display: block
+        opacity: 0
+        width: 100%!important
+        height: 100%!important
+        font-size: 100px
+    &:nth-child(3n+0)
+      margin-right: 0
+.photos1
+  .photo
+    margin-right: 16px
+    width: 101px
+    height: 101px
+    .file-btn
+      top: 0
+      left: 0
+      background: none
+      width: 100%!important
+      height: 100%!important
+    .del
+      z-index: 99
+      width: 27px
+      height: 27px
+      display: block
+      position: absolute
+      bottom: 5px
+      right: 5px
+      background: url("../images/icon@2x/removePhoto@2x.png") 0 0 no-repeat
+      background-size: 27px 27px
+    &:nth-child(3n+0)
+      margin-right: 16px
+    &:nth-child(4n+0)
+      margin-right: 0
 
 // public global end
 
 // nav start
 nav
-  z-index: 9
+  z-index: 99
   width: 220px
   height: 100%
   display: block
@@ -361,7 +443,7 @@ nav
 //header start
 header
   padding-right: 220px
-  z-index: 8
+  z-index: 98
   height: 58px
   width: 100%
   position: absolute
@@ -428,7 +510,7 @@ header
 
 // search start
 .search
-  z-index: 6
+  z-index: 97
   position: absolute
   //top: 58px
   top: -1000px
@@ -1107,20 +1189,19 @@ header
         display: inline-block
         margin-right: 15px!important
         overflow: hidden
-      .select2
-        margin-bottom: 20px
-        margin-right: 15px
-      .select2,.select2 .selection,.select2-selection--single,.select2-selection__rendered,.select2-selection__arrow
-        height: 50px
-        outline: none
-        line-height: 50px
-      .select2-selection--single
+      textarea
+        width: 100%
+        height: 139px
+        border-radius: 5px
+        background-color: #ffffff
         border: solid 1px #dedddf
+        resize: none
       input
         border-radius: 5px
         height: 50px
         line-height: 50px
       label
+        margin-bottom: 7px
         font-size: 14px
         font-weight: normal
         color: $font-color
@@ -1174,11 +1255,13 @@ header
           position: absolute
           right: 0px
           bottom: 0
+          top: 0
           z-index: 99
           margin: auto 0
         span.on
           background: url("../images/icon@2x/del-icon@2x.png") 0 0 no-repeat
           background-size: 28px 28px
+
 
       .input.on::before
         background: url("../images/icon@2x/yes1-icon@2x.png") 0 0 no-repeat
@@ -1196,42 +1279,13 @@ header
         input
           width: 443px
           float: left
-      .photos
-        margin-top: 10px
-        .photo
-          float: left
-          margin-right: 25px
-          margin-bottom: 25px
-          width: 154px
-          height: 154px
-          position: relative
-          img
-            z-index: 2
-            position: absolute
-            top: 0
-            border-radius: 5px
-            left: 0
-            width: 100%
-            height: 100%
-          .file-btn
-            z-index: 3
-            width: 27px
-            cursor: pointer
-            height: 27px
-            display: block
-            position: absolute
-            bottom: 5px
-            right: 5px
-            background: url("../images/icon@2x/file-btn1@2x.png") 0 0 no-repeat
-            background-size: 27px 27px
-            input
-              display: block
-              opacity: 0
-              width: 100%
-              height: 100%
-              font-size: 100px
-          &:nth-child(3n+0)
-            margin-right: 0
+        span
+          margin-right: 15px
+          height: 50px
+          line-height: 50px
+          font-size: 14px
+          font-weight: normal
+          color: $font-color
       .desc
         margin-top: 10px
         padding: 38px 10px
@@ -1279,6 +1333,7 @@ header
         margin-right: 16px
       input
         width: 64px
+        border-radius: 5px
         float: left
         text-align: center
         display: block
@@ -1307,7 +1362,32 @@ header
       width: 30px
       display: block
       margin: 20px auto
-
+    .certificates
+      width: 100%
+      height: 139px
+      border: solid 1px #dedddf
+      position: relative
+      border-radius: 5px
+      background: #f3f3f3 url("../images/icon@2x/file-add@2x.png") center center no-repeat
+      background-size: 26px 26px
+      cursor: pointer
+      input
+        z-index: 2
+        width: 100%
+        height: 100%
+        display: block
+        position: absolute
+        left: 0px
+        font-size: 100%
+        opacity: 0
+        top: 0px
+      img
+        z-index: 1
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0px
+        left: 0px
 
 // 網美註冊3-1body
 .net-register-sorry
@@ -1319,7 +1399,11 @@ header
     margin-top: 31px
     margin-bottom: 20px
   p
+    margin-bottom: 0px
+  .mb25
     margin-bottom: 25px
+  .mb28
+    margin-bottom: 28px
   .btn
     width: 275px
     height: 55px
@@ -1327,7 +1411,131 @@ header
     margin-top: 17px
 
 
+// 发布工作
+.send-work-page
+  width: 592px
+  margin: 0 auto
+  h2
+    font-size: 20px
+    font-weight: 500
+    color: #2b2b2d
+    margin: 39px 0 47px
+    ~p
+      font-size: 16px
+      font-weight: normal
+      color: #b9b9b9
+  .input-group
+    overflow: hidden
+    width: 100%
+    margin-bottom: 40px
+    >.goods
+      height: 54px
+      position: relative
+      margin-bottom: 10px
+      >span
+        display: block
+        width: 28px
+        height: 28px
+        background: url("../images/icon@2x/add-icon@2x.png") 0 0 no-repeat
+        background-size: 28px 28px
+        position: absolute
+        right: 20px
+        top: 0
+        bottom: 0
+        z-index: 9
+        margin: auto 0
+      >span.on
+        background: url("../images/icon@2x/del-icon@2x.png") 0 0 no-repeat
+        background-size: 28px 28px
 
+    input
+      width: 100%
+      border-radius: 5px!important
+      height: 54px
+      line-height: 54px
+    .select2
+      margin-bottom: 10px!important
+      &:nth-of-type(2n+0)
+        margin-right: 0 !important
+    .select2-selection__arrow
+      margin-right: 10px
+      b
+        border-color: rgba(136, 136, 136, 0) !important
+    input.icon-down,.select2-selection__arrow
+      background: url("../images/icon@2x/chevron-small-down@2x.png") 96% center no-repeat
+      background-size: 16px 8px
+    .start-date,.end-date
+      display: none
+    label
+      font-size: 16px
+      font-weight: normal
+      color: $font-color
+      margin-bottom: 10px
+      i
+        font-size: 16px
+        font-weight: 500
+        font-style: normal
+        color: #fbdbd7
+        margin-left: 5px
+      .tip
+        color: #b9b9b9
+        margin-left: 10px
+    .checkbox-box>label
+      float: left
+      margin-top: 0
+      margin-right: 7px
+      margin-bottom: 15px
+      &:nth-of-type(7n+0)
+        margin-right: 0
+    .checkbox-cos
+      width: 100%
+      height: 54px
+      line-height: 54px
+      border-radius: 5px
+      background-color: #ffffff
+      border: solid 1px #dedddf
+      display: block
+      padding: 0 15px
+      font-size: 16px
+      font-weight: normal
+      color: $font-color
+      cursor: pointer
+    input:checked+label.checkbox-cos
+      background: #fbdbd7 url("../images/icon@2x/checked-2@2x.png") 97% center no-repeat
+      background-size: 18px 14px
+    .cos-city
+      display: none
+  .price-select>.select2
+    display: none
+  input.ren
+    display: none
+    background: url("../images/ren.png") 96% center no-repeat
+    background-size: 16px 16px
+  .where
+    width: 276px
+    float: left
+    overflow: hidden
+  .net-style>input
+      margin-bottom: 10px
+  .photo
+    margin-right: 28px
+    width: 178px
+    height: 178px
+    border-radius: 1px
+    border: none
+    &:nth-child(3n+0)
+      margin-right: 0
+    img
+      border-radius: 1px
+  .btn
+    width: 276px
+    float: left
+    margin-bottom: 98px
+    margin-top: 34px
+    height: 55px
+    line-height: 55px
+    &:first-of-type
+      margin-right: 40px
 
 //主体内容结束
 
