@@ -66,6 +66,46 @@ input:checked+label.checkbox-xs::before
   background: url("../images/icon@2x/checkbox-checked@2x.png") 0 0 no-repeat
   background-size: 17px 17px
 
+// switch
+.switch
+  display: inline-block
+  input
+    display: none
+  label
+    display: inline-block
+    position: relative
+    cursor: pointer
+    margin-left: 45px
+    width: 43px
+    height: 24px
+    background: url("../images/icon@2x/switch-close@2x.png") center center no-repeat
+    background-size: 43px 24px
+    span
+      display: none
+      position: absolute
+      width: inherit
+      height: 24px
+      line-height: 24px
+      font-weight: normal
+      top: 0px
+      left: -45px
+      color: $font-color
+      font-size: 13px
+      bottom: 0px
+      margin: auto 0
+      opacity: 1
+  input+label>span.close
+    display: block
+  input:checked+label>span.close
+    display: none
+  input:checked+label
+    background: url("../images/icon@2x/switch-open@2x.png") center center no-repeat
+    background-size: 43px 24px
+    span.open
+      display: block
+
+
+
 // btn
 .btn
   font-weight: 500
@@ -143,14 +183,14 @@ input:checked+label.checkbox-xs::before
   line-height: 43px
   display: inline-block
   font-size: 14px
-  text-align: center
-  padding: 0
-  color: $font-color
-  background-color: #FBDBD7
+  text-align: center!important
+  padding: 0!important
+  color: $font-color!important
+  background-color: #FBDBD7!important
   &:hover
-    background-color: #FEF4F3
+    background-color: #FEF4F3!important
   &:active
-    background-color: #FACEC8
+    background-color: #FACEC8!important
 .btn-photo
   cursor: pointer
   display: block
@@ -368,7 +408,49 @@ ul
     margin-bottom: 0px
 .public-list>li:nth-child(3n+0)
   margin-right: 0
-
+// list2
+.public-list2
+  .swiper-button-next
+    width: 70px
+    height: 70px
+    background: url("../images/icon@2x/page-btn-icon@2x.png") center center no-repeat
+    background-size: 70px
+    top: 47%
+    right: -33px
+  .swiper-button-prev
+    width: 70px
+    height: 70px
+    background: url("../images/icon@2x/page-btn-icon1@2x.png") center center no-repeat
+    background-size: 70px
+    top: 47%
+    left: -33px
+  .swiper-slide
+    width: 230px
+    height: 267px
+    margin-top: 0px!important
+    margin-bottom: 30px
+    .info
+      font-size: 14px
+      margin-top: 15px
+      h4
+        font-size: 18px
+        font-weight: 500
+        margin: 0
+      i
+        font-style: normal
+      img
+        width: 14px
+        height: 13px
+        position: relative
+        top: -2px
+        right: 5px
+    a
+      color: $font-color
+    a>img
+      display: block
+      border-radius: 2px
+      width: 230px
+      height: 230px
 // tab head
 .tab-cos.nav
   li>a
@@ -402,20 +484,20 @@ ul
     border-radius: 3px
     background-color: #2b2b2d
     border: solid 1px #2b2b2d
-    li>a::after
-      display: none
-      content: ''
-      width: 7px
-      height: 7px
-      border-radius: 50%
-      background-color: #fbdbd7
-      position: absolute
-      top: 0
-      bottom: 0
-      right: -15px
-      margin: auto 0
-      li.on>a::after
-        display: block
+  li>a::after
+    display: none
+    content: ''
+    width: 7px
+    height: 7px
+    border-radius: 50%
+    background-color: #fbdbd7
+    position: absolute
+    top: 0
+    bottom: 0
+    right: -15px
+    margin: auto 0
+  li.on>a::after
+    display: block
 
 
 // input-cos
@@ -921,40 +1003,7 @@ header
     position: relative
     max-width: 1036px
     margin: 80px auto 0
-    .swiper-button-next
-      width: 70px
-      height: 70px
-      background: url("../images/icon@2x/page-btn-icon@2x.png") center center no-repeat
-      background-size: 70px
-      top: 47%
-      right: -33px
-    .swiper-slide
-      width: 230px
-      height: 267px
-      margin-top: 0px!important
-      margin-bottom: 30px
-      .info
-        font-size: 14px
-        margin-top: 15px
-        h4
-          font-size: 18px
-          font-weight: 500
-          margin: 0
-        i
-          font-style: normal
-        img
-          width: 14px
-          height: 13px
-          position: relative
-          top: -2px
-          right: 5px
-      a
-        color: $font-color
-      a>img
-        display: block
-        border-radius: 2px
-        width: 230px
-        height: 230px
+
   .hot-work
     padding: 0 20px
   .hot-work>div
@@ -1672,7 +1721,7 @@ header
       font-size: 14px
       color: #b9b9b9
       font-weight: normal
-    .photos
+    .photos-cos
       overflow: hidden
       width: 100%
       label
@@ -1766,9 +1815,514 @@ header
         &:nth-child(3n+0)
           margin-right: 0!important
 
+//找網美-结果
+.search-net
+  width: 1050px
+  margin: 0 auto
+  .search-res-title
+    font-size: 16px
+    color: #9B9B9B
+    margin-top: 50px
+    &+.public-list
+      margin-top: 20px
+
+  .head
+    h3
+      margin: 40px 0 36px 0
+      font-size: 20px
+      color: $font-color
+      font-weight: bold
+    .list
+      overflow: hidden
+    label
+      float: left
+      margin: 0 10px 10px 0
+      &:nth-of-type(12n+0)
+        margin-right: 0
+  .public-list
+    margin-top: 50px
+    li
+      height: 406px
+      margin-bottom: 50px
+      h3
+        margin: 0
+      .info
+        margin-top: 20px
+      .tag
+        margin-top: 10px
+        background: url("../images/icon@2x/tag-icon@2x.png") 0 4px no-repeat
+        background-size: 23px 11px
+        padding-left: 34px
+        overflow: hidden
+        span
+          float: left
+          position: relative
+          color: #525252
+          font-size: 16px
+          display: block
+          padding-right: 14px
+          &::after
+            position: absolute
+            top: 0
+            bottom: 0
+            right: 7px
+            margin: auto 0
+            width: 2px
+            height: 2px
+            display: block
+            content: ''
+            border-radius: 50%
+            background-color: $font-color
+          &:last-of-type::after
+            display: none
+      img
+        width: 314px
+        height: 314px
 
 
 
+//網美介紹
+.net-desc
+  padding-bottom: 79px
+  width: 774px
+  margin: 0 auto
+  .banner
+    position: relative
+    width: 100%
+    height: 774px!important
+    .swiper-pagination-bullets
+      top: 48%
+      right: -20px
+      span
+        display: block
+        width: 8px
+        opacity: 1
+        margin: 0 auto
+        height: 8px
+        border-radius: 50%
+        background-color: #D8D8D8
+        margin-bottom: 6px
+    .swiper-pagination-bullet-active
+      width: 10px!important
+      height: 10px!important
+      background-color: #2B2B2D!important
+    .swiper-button-next,.swiper-button-prev
+      width: 57px
+      height: 45px
+      left: 0px
+      right: 0px
+      margin: 0 auto
+    .swiper-button-next
+      bottom: 43px
+      top: inherit
+      background: url("../images/icon@2x/swiper-button-next@2x.png") center center no-repeat
+      background-size: 57px 45px
+      &::after
+        width: 100px
+        height: 25px
+        display: block
+        content: '往下滾動捲軸'
+        position: absolute
+        bottom: -20px
+        left: -18px
+        text-align: center
+        color: #fff
+        font-size: 16px
+        font-weight: 500
+    .swiper-button-prev
+      top: 20px
+      bottom: inherit
+      background: url("../images/icon@2x/swiper-button-prev@2x.png") center center no-repeat
+      background-size: 57px 45px
+    .swiper-container
+      width: 774px
+      height: 774px
+      .swiper-slide
+        overflow: hidden
+        img
+          width: 258px
+          height: 258px
+          float: left
+    .rectangle
+      width: 112px
+      height: 38px
+      text-align: center
+      line-height: 38px
+      color: $font-color
+      font-size: 16px
+      font-weight: 500
+      padding: 0
+      border-radius: 5px
+      background-color: rgba(255, 255, 255, 0.77)
+      position: absolute
+      top: 20px
+      right: 20px
+      z-index: 99
+      i
+        width: 20px
+        height: 16px
+        display: inline-block
+        background: url("../images/icon@2x/heart01@2x.png") center center no-repeat
+        background-size: 20px 16px
+        position: relative
+        top: 3px
+      &.on>i
+        background: url("../images/icon@2x/heart@2x.png") center center no-repeat
+        background-size: 20px 16px
+  .user-info
+    margin-top: 35px
+    overflow: hidden
+    .touxing
+      width: 133px
+      height: 133px
+      margin-left: 6px
+      float: left
+      img
+        width: 133px
+        height: 133px
+    .info
+      float: left
+      padding-left: 40px
+      padding-top: 15px
+      h3
+        font-size: 22px
+        color: $font-color
+        font-weight: 500
+      .count
+        margin-top: 20px
+        overflow: hidden
+      .socia
+        margin-top: 8px
+        overflow: hidden
+      .count>span,.socia>span
+        display: block
+        width: 71px
+        float: left
+        font-size: 18px
+        font-weight: 500
+        color: #2b2b2d
+      .socia>span
+        font-weight: normal
+        font-size: 15px
+        img
+          float: left
+          margin-right: 7px
+          position: relative
+          top: 2px
+    .btns
+      padding-top: 15px
+      float: right
+      .socias
+        overflow: hidden
+        a
+          float: right
+          margin-left: 10px
+      .back
+        margin-top: 33px
+        a
+          line-height: 42px
+          float: right
+          font-size: 16px
+          font-weight: normal
+          color: $font-color
+        .page-prev,.page-next
+          width: 42px
+          height: 42px
+          display: inline-block
+        .page-back
+          height: 42px
+        .page-prev
+          background: url("../images/icon@2x/page-left@2x.png") center center no-repeat
+          background-size: 42px 42px
+          margin-right: 40px
+        .page-next
+          background: url("../images/icon@2x/page-right@2x.png") center center no-repeat
+          background-size: 42px 42px
+          margin-right: 34px
+  .line
+    margin: 40px 0
+  .desc
+    position: relative
+    overflow: hidden
+    h3
+      font-size: 18px
+      color: $font-color
+      font-weight: 500
+      margin-bottom: 20px
+    p
+      font-size: 16px
+      font-weight: normal
+      color: $font-color
+
+    .btn-action
+      position: absolute
+      top: 0px
+      right: 0px
+      width: 262px
+      height: 52px
+      line-height: 52px
+    .checkbox-list>.checkbox
+      float: left
+      margin: 0 9px 9px 0
+      &:nth-of-type(9n+0)
+        margin-right: 0
+  .public-list2
+    position: relative
+    h3
+      font-size: 18px
+      color: $font-color
+      font-weight: 500
+      margin-bottom: 40px
+    .swiper-button-prev,.swiper-button-next
+      top: 45%
+
+//搜尋工作1 工作列表
+.search-work-list
+  width: 1050px
+  margin: 0 auto
+  overflow: hidden
+  .btn-nav.nav
+    width: 391px
+    margin: 0 auto
+    padding-top: 29px
+    border: 0
+    li>a
+      margin-right: 15px
+      width: 188px
+      height: 53px
+      line-height: 53px
+    li:first-child>a>i
+        position: relative
+        top: 6px
+        width: 19px
+        height: 20px
+        display: inline-block
+        background: url("../images/icon@2x/job-search-black2@2x.png") center center no-repeat
+        background-size: 19px 20px
+    li:last-child>a
+      margin-right: 0
+    li:first-child.active>a>i
+      background: url("../images/icon@2x/job-search-black1@2x.png") center center no-repeat
+      background-size: 19px 20px
+    li:last-child>a>i
+      position: relative
+      top: 3px
+      width: 19px
+      height: 18px
+      display: inline-block
+      background: url("../images/icon@2x/buildong-black2@2x.png") center center no-repeat
+      background-size: 19px 18px
+    li:last-child.active>a>i
+      background: url("../images/icon@2x/buildong-black1@2x.png") center center no-repeat
+      background-size: 19px 18px
+
+    a
+      display: block
+      width: 142px
+      height: 40px
+      margin-right: 20px
+      text-align: center
+      border-radius: 5px
+      padding: 0
+      line-height: 40px
+      border: solid 1px #f3f3f3
+      background-color: #f3f3f3
+      color: #9b9b9b
+      box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.08)
+      &:hover
+        border: solid 1px #f3f3f3
+      &:link
+        border: solid 1px #f3f3f3
+    li.active>a
+      background-color: #fff
+      color: $font-color
+  .head
+    h3
+      margin: 40px 0 36px 0
+      font-size: 20px
+      color: $font-color
+      font-weight: bold
+    .list
+      overflow: hidden
+    label
+      float: left
+      margin: 0 10px 10px 0
+      &:nth-of-type(12n+0)
+        margin-right: 0
+  .public-list
+    margin-top: 60px
+  #search-type2
+    .public-list>li
+      .info
+        margin-top: 20px
+        h3
+          margin: 0
+        p
+          font-size: 14px
+          width: 100%
+          height: 60px
+          overflow: hidden
+          text-overflow: ellipsis
+          font-weight: normal
+          margin-top: 8px
+          color: #525252
+    .public-list>li>a>img
+      width: 314px
+      height: 193px
+    .search-link
+      margin-top: 22px
+      text-align: right
+      a
+        font-size: 14px
+        position: relative
+        display: inline-block
+        padding-right: 12px
+        color: #b9b9b9
+        font-weight: 500
+        &::after
+          width: 7px
+          height: 12px
+          display: block
+          content: ""
+          background: url(../images/icon@2x/jiantou@2x.png) center center no-repeat
+          background-size: 7px 12px
+          position: absolute
+          top: 0
+          bottom: 0
+          right: 0
+          margin: auto 0
+
+
+
+
+
+
+
+// 搜尋工作5 工作介紹
+.search-work-desc
+  padding-bottom: 70px
+  .content-top
+    .title
+      width: 774px
+      height: 92px
+      border-radius: 5px
+      background-color: #ffffff
+      border: solid 1px #dedddf
+      .name
+        float: left
+        margin: 25px 0 0 20px
+        h4
+          font-size: 15px
+          font-weight: 500
+          color: #525252
+        span
+          float: left
+          margin-right: 10px
+          font-size: 12px
+          font-weight: normal
+          color: #2b2b2d
+          line-height: normal
+          margin-top: 10px
+
+
+      img
+        width: 52px
+        height: 52px
+        float: left
+        margin: 20px 0 0 20px
+      .btn
+        width: 97px
+        height: 42px
+        margin-right: 20px
+        margin-top: 25px
+    .desc
+      .first
+        font-size: 17px
+        padding-left: 26px
+        font-weight: normal
+        color: $font-color
+        margin-bottom: 10px
+        overflow: hidden
+        position: relative
+        img
+          position: absolute
+          left: 0px
+          top: 0px
+          bottom: 0px
+          display: block
+          margin: auto 0
+      a
+        font-size: 14px
+        display: block
+        color: #01579b
+      p
+        font-size: 16px
+        font-weight: normal
+      .url
+        margin-top: 39px
+    .contact
+      width: 774px
+      height: 181px
+      border-radius: 5px
+      margin: 40px 0
+      padding: 43px 40px
+      background-color: #ffffff
+      border: solid 1px #dedddf
+      position: relative
+      .btn
+        width: 262px
+        height: 52px
+        line-height: 52px
+        position: absolute
+        top: 65px
+        right: 40px
+      h3
+        margin-top: 0
+        margin-bottom: 20px
+    .checkbox-list
+      overflow: hidden
+      label
+        width: 77px
+        float: left
+        margin: 0 10px 10px 0
+        &:nth-of-type(9n+0)
+          margin-right: 0
+    .public-list2
+      position: relative
+  .list2
+    width: 100%
+    position: relative
+    height:  318px
+  .public-list
+    overflow: visible
+    display: flex
+    li
+      margin-bottom: 0px!important
+  .swiper-button-next
+    width: 70px
+    height: 70px
+    background: url("../images/icon@2x/page-btn-icon@2x.png") center center no-repeat
+    background-size: 70px
+    top: 47%
+    right: -33px
+  .swiper-button-prev
+    width: 70px
+    height: 70px
+    background: url("../images/icon@2x/page-btn-icon1@2x.png") center center no-repeat
+    background-size: 70px
+    top: 47%
+    left: -33px
+
+//我的履歷2
+.www-box
+  .www>img
+    width: 43px!important
+    height: 43px!important
+    margin-top: 3px!important
+    margin-right: 24px!important
+    border-radius: 3px
+    border: 1px dashed #ccc
+    padding: 3px
 
 
 

@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>我的商家介紹2</title>
+    <title>搜尋工作5 工作介紹</title>
     <link href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="lib/select2/dist/css/select2.css" rel="stylesheet">
+    <link href="lib/Swiper-4.0.7/dist/css/swiper.min.css" rel="stylesheet">
     <link href="style/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -348,140 +348,227 @@
 
 <!--主体内容 开始-->
 <div class="container">
-    <div class="business-edit">
-        <h3 class="tit">編輯商家介紹</h3>
-        <ul class="tab-cos nav nav-tabs">
-            <li class="active">
-                <a href="#" data-target="#page1" data-toggle="tab">商家資訊</a>
-            </li>
-            <li>
-                <a href="#" data-target="#page2" data-toggle="tab">聯絡人</a>
-            </li>
-            <li>
-                <a href="#" data-target="#page3" data-toggle="tab">商家介紹</a>
-            </li>
-        </ul>
-        <div class="tab-content">
-            <div class="tab-pane active" id="page1">
-                <form action="">
-                    <div class="tip">* 必填欄位</div>
-                    <div class="photos photos-cos">
-                        <label>請上傳商家LOGO</label>
-                        <div class="photo">
-                            <img src="images/Oval@2x.png" alt="">
-                            <span class="file-btn">
-                            <input type="file" accept="image/*">
-                        </span>
+    <div class="business-introduce search-work-desc">
+        <div class="content-top">
+            <div class="banner">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="images/business-banner.png" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="images/business-banner.png" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <img src="images/business-banner.png" alt="">
+                            </a>
                         </div>
                     </div>
-                    <div class="input-group">
-                        <label>商家名稱 <i>*</i></label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="input-group">
-                        <label>統一編號 <i>*</i></label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="input-group">
-                        <label>密碼 <i>*</i></label>
-                        <input type="password" class="form-control">
-                    </div>
-                    <div class="input-group">
-                        <label>
-                            公司地址<i>*</i>
-                        </label>
-                        <div class="clearfix city">
-                            <select style="width: 162px;" class="form-control" name="" >
-                                <option>台北市</option>
-                                <option>台中市</option>
-                            </select>
-                            <select style="width: 162px" class="form-control" name="" >
-                                <option>中山區</option>
-                                <option>中山區</option>
-                            </select>
-                        </div>
-                        <input type="text" placeholder="街道" class="form-control">
-                    </div>
-                    <div class="input-group">
-                        <label>
-                            商家網站
-                            <i>*</i>
-                        </label>
-                        <div class="www">
-                            <span class="pull-left">https://</span>
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <button  type="submit" class="btn btn-black">儲存變更</button>
-                </form>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
             </div>
-            <div class="tab-pane" id="page2">
-                <form action="">
-                    <div style="margin-bottom:10px" class="tip">* 必填欄位</div>
-                    <div class="input-group">
-                        <label>聯絡人名稱 <i>*</i></label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="input-group">
-                        <label>聯絡人E-mail <i>*</i></label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="input-group">
-                        <label>聯絡人市話 <i>*</i></label>
-                        <input type="text" placeholder="02-0000-0000-分機" class="form-control">
-                    </div>
-                    <div class="input-group">
-                        <label>聯絡人手機號碼 <i>*</i></label>
-                        <input type="text" placeholder="0900-000-000" class="form-control">
-                    </div>
-                    <div class="clearfix"></div>
-                    <button  type="submit" class="btn btn-black">儲存變更</button>
-                </form>
+            <div class="title">
+                <img class="img-circle" src="images/Model4.png" alt="">
+                <div class="name">
+                    <h4>RAW餐廳</h4>
+                    <span>一週前</span>
+                    <span>發佈此工作</span>
+                </div>
+                <a href="" class="btn btn-pink">追蹤商家</a>
             </div>
-            <div class="tab-pane" id="page3">
-                <form action="">
-                    <div style="margin-bottom:10px" class="tip">* 必填欄位</div>
-                    <div class="input-group">
-                        <label>商家簡介 <i>*</i><span class="tip1">一個好的介紹能幫你更有效吸引網美！</span></label>
-                        <textarea placeholder="有什麼想展示給大家看的？（限500字）" class="form-control"></textarea>
-                    </div>
-                    <div class="input-group">
-                        <label>
-                            主要商品或品牌或服務
-                            <i>*</i>
-                        </label>
-                        <div class="input-cos">
-                            <input placeholder="L’Oreal 純色訂製唇膏" type="text" class="form-control">
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="photos photos1">
-                        <div class="photo">
-                            <img src="images/m1.png" alt="">
-                            <span class="file-btn">
-                            <input type="file" accept="image/*">
-                        </span>
-                            <span class="del"></span>
-                        </div>
-                        <div class="photo">
-                            <img src="images/m2.png" alt="">
-                            <span class="file-btn">
-                            <input type="file" accept="image/*">
-                        </span>
-                            <span class="del"></span>
-                        </div>
-                        <div class="photo">
-                            <img src="images/m3.png" alt="">
-                            <span class="file-btn">
-                            <input type="file" accept="image/*">
-                        </span>
-                            <span class="del"></span>
-                        </div>
-                    </div>
+            <div class="desc">
+                <h3 style="margin-bottom: 29px;font-size: 22px;">餐廳試吃打卡員</h3>
+                <div class="first"><img width="12" src="images/icon@2x/first1@2x.png" alt="">通告費用：NT$2000~NT$10000</div>
+                <div class="first"><img width="10" src="images/icon@2x/first2@2x.png" alt="">贊助商品：NT$2000餐卷</div>
+                <div class="first"><img width="11" src="images/icon@2x/first3@2x.png" alt="">合作時間：短期 2017/11/16 至 2017/11/28</div>
+                <div class="first"><img width="10" src="images/icon@2x/first4@2x.png" alt="">需求人數：16人</div>
+                <div class="first"><img width="10" src="images/icon@2x/first5@2x.png" alt="">合作地點：台中市中山區建國北路二段64巷6號</div>
+                <a style="font-weight: 500; margin:20px 0 0 26px;" href="">使用 Google Maps 查看</a>
+            </div>
+            <div class="line"></div>
+            <div class="desc">
+                <h3>合作內容</h3>
+                <p>合作說明：餐廳拍照並在Instagram打卡地標，照片tag RAW餐廳</p>
+                <div class="url">
+                    <p>商品網址：</p>
+                    <a href="http://www.raw.com.tw/indexContent.aspx#3rdPage">http://www.raw.com.tw/indexContent.aspx#3rdPage</a>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="desc">
+                <h3>合作方式</h3>
+                <p>Po文・打卡・照片・影片</p>
+            </div>
+            <div class="line"></div>
+            <div class="desc">
+                <h3 style="margin-bottom: 3px;">社群媒體</h3>
+                <p style="color: #9b9b9b;margin-bottom: 20px">此工作將會使用以下社群媒體合作，符合其中一個條件即可！</p>
+                <p>Instagram・Facebook</p>
+            </div>
+            <div class="line"></div>
+            <div class="desc">
+                <h3>網美加分條件</h3>
+                <p>年齡：25-30</p>
+                <p>身高：161以上</p>
+                <p>體重：41-55</p>
+                <p>風格：日系</p>
+            </div>
+            <div class="desc contact">
+                <h3>聯絡方式</h3>
+                <p>聯絡人：陳先生</p>
+                <p>聯絡人手機：0928-000-333</p>
+                <a href="" class="btn btn-pink">立即應徵工作</a>
+            </div>
+            <div class="line"></div>
+            <div class="desc">
+                <h3>發現更多</h3>
+                <div class="checkbox-list">
+                    <input checked id="c-d-1" type="checkbox">
+                    <label for="c-d-1" class="checkbox">美妝</label>
+                    <input checked id="c-d-2" type="checkbox">
+                    <label for="c-d-2" class="checkbox">保養</label>
+                    <input id="c-d-3" type="checkbox">
+                    <label for="c-d-3" class="checkbox">穿搭</label>
+                    <input id="c-d-4" type="checkbox">
+                    <label for="c-d-4" class="checkbox">美容美髮</label>
+                    <input id="c-d-5" type="checkbox">
+                    <label for="c-d-5" class="checkbox">包包</label>
+                    <input id="c-d-6" type="checkbox">
+                    <label for="c-d-6" class="checkbox">女鞋</label>
+                    <input id="c-d-7" type="checkbox">
+                    <label for="c-d-7" class="checkbox">美妝</label>
+                    <input id="c-d-8" type="checkbox">
+                    <label for="c-d-8" class="checkbox">保養</label>
+                    <input id="c-d-9" type="checkbox">
+                    <label for="c-d-9" class="checkbox">包包</label>
+                    <input id="c-d-10" type="checkbox">
+                    <label for="c-d-10" class="checkbox">女鞋</label>
+                    <input id="c-d-11" type="checkbox">
+                    <label checked for="c-d-11" class="checkbox">美妝</label>
+                    <input id="c-d-12" type="checkbox">
+                    <label for="c-d-12" class="checkbox">其他</label>
+                    <input id="c-d-13" type="checkbox">
+                    <label for="c-d-13" class="checkbox">廣告</label>
+                    <input id="c-d-14" type="checkbox">
+                    <label for="c-d-14" class="checkbox">外拍</label>
+                    <input id="c-d-15" type="checkbox">
+                    <label for="c-d-15" class="checkbox">穿搭</label>
+                    <input id="c-d-16" type="checkbox">
+                    <label for="c-d-16" class="checkbox">棚拍</label>
+                    <input id="c-d-17" type="checkbox">
+                    <label for="c-d-17" class="checkbox">試用文</label>
+                    <input id="c-d-18" type="checkbox">
+                    <label for="c-d-18" class="checkbox">其他</label>
+                </div>
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="list-box">
+            <h3 class="tit">推薦工作</h3>
+            <div class="list2">
+                <div class="swiper-container">
+                    <ul class="public-list swiper-wrapper">
+                        <li class="swiper-slide">
+                            <a href="">
+                                <img src="images/work.png" alt="">
+                                <div class="info">
+                                    <div class="sub-title clearfix">
+                                        <span class="pull-left">RAW餐廳</span>
+                                        <span class="pull-right"><i></i>台中</span>
+                                    </div>
+                                    <h3>餐廳試吃打卡員</h3>
+                                    <p>通告費用 NT.2000</p>
+                                    <p>招待額度 NT.1000餐廳</p>
+                                    <p>包月免費4次用餐</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <img src="images/work2.png" alt="">
+                                <div class="info">
+                                    <div class="sub-title clearfix">
+                                        <span class="pull-left">RAW餐廳</span>
+                                        <span class="pull-right"><i></i>台中</span>
+                                    </div>
+                                    <h3>餐廳試吃打卡員</h3>
+                                    <p>通告費用 NT.2000</p>
+                                    <p>招待額度 NT.1000餐廳</p>
+                                    <p>包月免費4次用餐</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <img src="images/work3.png" alt="">
+                                <div class="info">
+                                    <div class="sub-title clearfix">
+                                        <span class="pull-left">RAW餐廳</span>
+                                        <span class="pull-right"><i></i>台中</span>
+                                    </div>
+                                    <h3>餐廳試吃打卡員</h3>
+                                    <p>通告費用 NT.2000</p>
+                                    <p>招待額度 NT.1000餐廳</p>
+                                    <p>包月免費4次用餐</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <img src="images/work1.png" alt="">
+                                <div class="info">
+                                    <div class="sub-title clearfix">
+                                        <span class="pull-left">RAW餐廳</span>
+                                        <span class="pull-right"><i></i>台中</span>
+                                    </div>
+                                    <h3>餐廳試吃打卡員</h3>
+                                    <p>通告費用 NT.2000</p>
+                                    <p>招待額度 NT.1000餐廳</p>
+                                    <p>包月免費4次用餐</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <img src="images/work3.png" alt="">
+                                <div class="info">
+                                    <div class="sub-title clearfix">
+                                        <span class="pull-left">RAW餐廳</span>
+                                        <span class="pull-right"><i></i>台中</span>
+                                    </div>
+                                    <h3>餐廳試吃打卡員</h3>
+                                    <p>通告費用 NT.2000</p>
+                                    <p>招待額度 NT.1000餐廳</p>
+                                    <p>包月免費4次用餐</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="">
+                                <img src="images/work2.png" alt="">
+                                <div class="info">
+                                    <div class="sub-title clearfix">
+                                        <span class="pull-left">RAW餐廳</span>
+                                        <span class="pull-right"><i></i>台中</span>
+                                    </div>
+                                    <h3>餐廳試吃打卡員</h3>
+                                    <p>通告費用 NT.2000</p>
+                                    <p>招待額度 NT.1000餐廳</p>
+                                    <p>包月免費4次用餐</p>
+                                </div>
+                            </a>
+                        </li>
 
-                    <div class="clearfix"></div>
-                    <button  type="submit" class="btn btn-black">儲存變更</button>
-                </form>
+                    </ul>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
     </div>
@@ -496,7 +583,28 @@
 
 <script src="lib/jquery/1.12.4/jquery.min.js"></script>
 <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-<script src="lib/select2/dist/js/select2.min.js"></script>
+<script src="lib/Swiper-4.0.7/dist/js/swiper.min.js"></script>
 <script src="js/app.js"></script>
+<script>
+    $(function(){
+        new Swiper ('.business-introduce .banner .swiper-container', {
+            loop: true,
+            navigation: {
+                nextEl: '.business-introduce .swiper-button-next',
+                prevEl: '.business-introduce .swiper-button-prev'
+            }
+        })
+        // 推薦工作
+        new Swiper('.list2 .swiper-container', {
+            slidesPerView: 3,
+            slidesPerColumn : 1,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.list2 .swiper-button-next',
+                prevEl: '.list2 .swiper-button-prev'
+            }
+        });
+    })
+</script>
 </body>
 </html>

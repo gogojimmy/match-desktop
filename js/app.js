@@ -162,7 +162,10 @@ $(function(){
         }
     });
 
-    // 我的商家介紹-轮播
+    // 儲存網美按钮
+    $(".net-desc .rectangle").on('click', function(){
+        $(this).addClass('on').find('span').text('已儲存');
+    })
 
 
 

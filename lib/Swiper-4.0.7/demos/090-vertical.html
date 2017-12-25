@@ -23,13 +23,16 @@
       padding: 0;
     }
     .swiper-container {
-      width: 100%;
-      height: 100%;
+      width: 774px;
+      height: 774px;
+      margin: auto;
     }
     .swiper-slide {
       text-align: center;
       font-size: 18px;
       background: #fff;
+      width: 258px;
+      height: 258px;
 
       /* Center slide text vertically */
       display: -webkit-box;
@@ -64,6 +67,9 @@
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
   </div>
 
   <!-- Swiper JS -->
@@ -73,10 +79,19 @@
   <script>
     var swiper = new Swiper('.swiper-container', {
       direction: 'vertical',
+      navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+      },
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
       },
+      slidesPerView: 3,
+      slidesPerColumn: 3,
+      slidesPerGroup: 9,
+      spaceBetween: 0,
+      mousewheel: true
     });
   </script>
 </body>
