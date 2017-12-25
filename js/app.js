@@ -167,8 +167,87 @@ $(function(){
         $(this).addClass('on').find('span').text('已儲存');
     })
 
+    // email显示新信息
+    $("header .email").on('click', function(){
+        $(".new-message-pop").css({'left': ($(this).offset().left - 225)+ 'px'}).toggle();
+        return false
+    });
+
+    // 站內信-列表checkbox监听
+    $(".message-list .content li input[type=checkbox]").on('change', function(){
+        var checkedLen = $(".message-list .content li input:checked").length
+        if(checkedLen>0){
+            $(".message-list .head .remove").show();
+        }else{
+            $(".message-list .head .remove").hide();
+        }
+    })
+    // 站內信-删除
+    $(".message-list .head .remove").on('click', function(){
+        $(".message-list .content li input:checked").parent().parent().remove();
+    });
+
+    // 接受 or 拒绝
+    $(".inquiry .accept,.inquiry .refuse").on('click', function(){
+        $(this).addClass('disabled');
+        if($(this).hasClass('accept')){
+            $(".accept-info").show();
+            $("textarea[id=content]").val('您好，\n' +
+                '很開心在MATCH收到你的履歷！\n' +
+                '在看完履歷後，覺得您的個人風格是我們希望找的網美。\n' +
+                '希望能進一步洽談合作細節，期待您的回信喔！\n' +
+                '謝謝！');
+            $("textarea[id=content]").focus();
+        }
+    });
+
+    // 发送消息
+    $(".chert-view .send-btn").on('click', function(){
+        var value = $("textarea[id=content]").val();
+        var date = moment().format('YYYY MM月DD日 H:mm');
+        console.log(date)
+        var selfHtm = '<div class="self">\n' +
+            '                <div class="con">\n' +
+            '                    <div class="date">回覆 <span>2017 9月12日 18:00</span></div>\n' +
+            '                    <p>\n' +
+            value +
+            '                    </p>\n' +
+            '                </div>\n' +
+            '            </div>';
+        $(".chart-list").append($(selfHtm));
 
 
+
+    })
+
+    // 展开聊天窗口
+
+
+    // 全局性事件
+    $(document).on('click', function(e){
+        if($(e.target).closest('.new-message-pop').length<1){
+            $(".new-message-pop").hide();
+        };
+    });
+    $(window).resize(function(){
+        $(".new-message-pop").css({'left': ($("header .email").offset().left - 225)+ 'px'})
+    });
+
+    // 聊天输入框自动高度
+    $("textarea[id=content]").on('input keyup keydown change keypress focus', function(){
+        var preHeight = $('#pre').text($(this).val()).height();
+        $(this).css({'overflow': 'hidden'});
+        if(preHeight >= 300){
+            $(this).height(300);
+            $(this).css({'overflow': 'auto'});
+            return;
+        }
+        $(this).height(preHeight);
+        if(preHeight<18){
+            $(this).height(18);;
+        }
+        resizeView();
+    })
 
 
 
@@ -177,17 +256,28 @@ $(function(){
 
 // 主体区域宽高度计算
 function resizeView(){
+    // 主体区域宽高
     var clintWidth = $('body').width()-220;
     var clintHeight = $('body').height()-58;
     $("header").css({width: clintWidth + 'px', 'padding-right': '0px'});
     $(".container").css({width: clintWidth + 'px', height: clintHeight + 'px'});
+    // 聊天区域
+    var chartHeight = $(".chert-view .content").height();
+    var chartFooterHeight = $(".chert-view .footer").outerHeight();
+    $(".chart-list").height(chartHeight-60-chartFooterHeight);
     $(window).resize(function () {
+        // 主体区域宽高
         clintWidth = $('body').width()-220;
         clintHeight = $('body').height()-58;
         $("header").css({width: clintWidth + 'px'});
         $(".container").css({width: clintWidth + 'px', height: clintHeight + 'px'});
+        // 聊天区域
+        var chartHeight = $(".chert-view .content").height();
+        var chartFooterHeight = $(".chert-view .footer").outerHeight();
+        $(".chart-list").height(chartHeight-60-chartFooterHeight);
     })
 }
+
 // 返回顶部
 function backTop(){
     $(".slider-top").on('click', function(){
@@ -200,4 +290,9 @@ function backTop(){
             $(".slider-top").fadeOut(300);
         }
     });
+}
+
+// 聊天内容滚动条置底
+function resizeChartScroll(){
+
 }

@@ -2270,6 +2270,462 @@ header {
   border: 1px dashed #ccc;
   padding: 3px; }
 
+.new-message-pop {
+  display: none;
+  width: 328px;
+  height: 454px;
+  position: absolute;
+  top: 47px;
+  left: 68%;
+  z-index: 99; }
+  .new-message-pop .section {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 4px;
+    z-index: 2;
+    background-color: #ffffff;
+    border-left: solid 1px #dedddf;
+    border-top: solid 1px #dedddf;
+    right: 70px;
+    transform: rotate(45deg); }
+  .new-message-pop .content {
+    z-index: 1;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 328px;
+    height: 443px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.11);
+    border: solid 1px #dedddf;
+    border-radius: 5px; }
+    .new-message-pop .content .head {
+      padding: 30px 15px 0;
+      overflow: hidden;
+      margin-bottom: 10px; }
+      .new-message-pop .content .head h4 {
+        font-size: 15px;
+        font-weight: 500;
+        color: #2b2b2d; }
+      .new-message-pop .content .head a {
+        font-size: 14px;
+        font-weight: normal;
+        color: #2b2b2d; }
+    .new-message-pop .content ul {
+      padding: 0 15px;
+      height: 380px;
+      width: 100%;
+      display: block;
+      overflow: hidden;
+      overflow-y: auto; }
+      .new-message-pop .content ul li {
+        list-style: none;
+        position: relative;
+        padding-top: 24px;
+        height: 92px;
+        border-top: 2px solid #dedddf; }
+        .new-message-pop .content ul li img {
+          width: 54px;
+          height: 54px;
+          float: left;
+          display: block; }
+        .new-message-pop .content ul li .info {
+          float: left;
+          width: 205px;
+          margin-left: 20px; }
+          .new-message-pop .content ul li .info h3 {
+            font-size: 15px;
+            font-weight: 500;
+            color: #2b2b2d; }
+          .new-message-pop .content ul li .info h4 {
+            font-size: 14px;
+            margin-top: 5px;
+            color: #4a4a4a;
+            font-weight: normal; }
+          .new-message-pop .content ul li .info p {
+            font-size: 13px;
+            margin-top: 3px;
+            font-weight: normal;
+            width: 100%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            color: #9b9b9b; }
+        .new-message-pop .content ul li .date {
+          position: absolute;
+          top: 20px;
+          right: 0px;
+          font-size: 13px;
+          color: #9b9b9b;
+          font-weight: normal; }
+
+.message-list {
+  width: 774px;
+  margin: 0 auto 56px; }
+  .message-list .head {
+    width: 774px;
+    height: 58px;
+    background-image: linear-gradient(97deg, #fcfcfc, #f3f3f3);
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.06);
+    border: solid 1px #e9e9e9;
+    margin: 20px 0 30px; }
+    .message-list .head h3 {
+      font-size: 20px;
+      margin-top: 18px;
+      margin-left: 20px;
+      font-weight: 500;
+      float: left;
+      color: #2b2b2d; }
+    .message-list .head .remove {
+      display: none;
+      float: right;
+      font-size: 14px;
+      cursor: pointer;
+      margin-top: 20px;
+      margin-right: 20px;
+      font-weight: normal; }
+      .message-list .head .remove i {
+        width: 12px;
+        height: 16px;
+        display: inline-block;
+        background: url("../images/icon@2x/trashcan@2x.png") center center no-repeat;
+        background-size: 12px 16px;
+        float: left;
+        margin-right: 10px;
+        margin-top: 1px; }
+  .message-list .head1 {
+    background-image: linear-gradient(262deg, #fffefd, #fff6f5);
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.06);
+    border: solid 1px #fbe3e0; }
+  .message-list .content {
+    margin-top: 30px;
+    width: 774px;
+    min-height: 803px;
+    border: solid 1px #dedddf; }
+    .message-list .content li {
+      position: relative;
+      padding-left: 52px;
+      height: 97px;
+      list-style: none;
+      border-bottom: solid 1px #e9e9e9; }
+      .message-list .content li:hover {
+        background-color: #f2f2f2; }
+      .message-list .content li .checkbox-box {
+        width: 52px;
+        height: 100%;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        left: 0; }
+        .message-list .content li .checkbox-box label.checkbox-xs {
+          margin-top: 45px; }
+    .message-list .content a {
+      padding-top: 15px;
+      display: block; }
+      .message-list .content a .img-circle {
+        width: 60px;
+        height: 60px;
+        float: left; }
+      .message-list .content a .info {
+        width: 300px;
+        float: left;
+        margin-left: 20px; }
+        .message-list .content a .info h3 {
+          font-size: 16px;
+          font-weight: 500;
+          color: #2b2b2d; }
+        .message-list .content a .info h4 {
+          font-size: 14px;
+          margin-top: 10px;
+          font-weight: normal;
+          color: #4a4a4a; }
+        .message-list .content a .info p {
+          font-size: 13px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          margin-top: 3px;
+          font-weight: normal;
+          color: #9b9b9b; }
+      .message-list .content a .date {
+        position: absolute;
+        top: 10px;
+        right: 32px;
+        font-size: 14px;
+        font-weight: normal;
+        color: #9b9b9b; }
+  .message-list li.new .date::after {
+    width: 8px;
+    height: 8px;
+    background-color: #c62828;
+    border-radius: 50%;
+    position: absolute;
+    content: "";
+    top: 0px;
+    bottom: 0px;
+    margin: auto 0;
+    right: -15px; }
+
+.chert-view {
+  width: 598px;
+  z-index: 99;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  right: 0;
+  padding-top: 58px; }
+  .chert-view .content {
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.09);
+    border: solid 1px #dedddf; }
+    .chert-view .content .head {
+      height: 60px;
+      text-align: right; }
+      .chert-view .content .head .close {
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+        background: url("../images/icon@2x/chart-close-icon@2x.png") center center no-repeat;
+        background-size: 12px 12px;
+        opacity: 1; }
+    .chert-view .content .chart-list {
+      height: 100%;
+      padding: 0 40px;
+      overflow: hidden;
+      overflow-y: auto; }
+      .chert-view .content .chart-list .inquiry {
+        position: relative;
+        width: 100%;
+        height: 72px;
+        padding: 15px 20px;
+        background-color: #f3f3f3;
+        border: solid 1px #dedddf;
+        margin: 0 auto 56px; }
+        .chert-view .content .chart-list .inquiry h3 {
+          width: 95px;
+          font-size: 20px;
+          font-weight: 500;
+          color: #2b2b2d;
+          overflow-y: hidden;
+          height: 22px;
+          line-height: 22px; }
+          .chert-view .content .chart-list .inquiry h3 span {
+            float: right;
+            font-size: 13px;
+            font-weight: normal; }
+        .chert-view .content .chart-list .inquiry p {
+          font-size: 15px;
+          font-weight: normal;
+          color: #00559d;
+          margin-top: 5px; }
+        .chert-view .content .chart-list .inquiry .btn {
+          position: absolute;
+          width: 93px;
+          padding: 0;
+          top: 17px;
+          right: 20px;
+          color: #fff;
+          font-weight: 500;
+          line-height: 39px;
+          height: 39px;
+          border-radius: 5px; }
+        .chert-view .content .chart-list .inquiry .refuse {
+          background-color: #c62828; }
+        .chert-view .content .chart-list .inquiry .accept {
+          background-color: #00559d;
+          right: 133px; }
+        .chert-view .content .chart-list .inquiry .disabled {
+          background-color: #b9b9b9; }
+      .chert-view .content .chart-list .they {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 30px; }
+        .chert-view .content .chart-list .they .con {
+          padding-left: 74px;
+          width: 100%;
+          position: relative; }
+          .chert-view .content .chart-list .they .con .img-circle {
+            position: absolute;
+            left: 0px;
+            top: 21px;
+            width: 60px;
+            height: 60px; }
+          .chert-view .content .chart-list .they .con .body {
+            float: left;
+            width: auto;
+            min-height: 101px;
+            border-radius: 5px;
+            background-color: #fef4f3;
+            padding: 15px 15px 10px; }
+          .chert-view .content .chart-list .they .con p {
+            margin: 0;
+            font-size: 14px;
+            font-weight: normal;
+            color: #2b2b2d; }
+            .chert-view .content .chart-list .they .con p img {
+              width: 80px; }
+          .chert-view .content .chart-list .they .con .date {
+            margin-top: 22px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #9b9b9b; }
+      .chert-view .content .chart-list .self {
+        width: 100%;
+        padding-left: 74px;
+        margin-bottom: 30px;
+        overflow: hidden; }
+        .chert-view .content .chart-list .self .con {
+          float: right;
+          width: auto;
+          min-height: 93px;
+          border-radius: 5px;
+          background-color: #f3f3f3;
+          padding: 15px; }
+        .chert-view .content .chart-list .self p {
+          font-size: 14px;
+          font-weight: normal;
+          color: #2b2b2d; }
+          .chert-view .content .chart-list .self p img {
+            width: 80px; }
+        .chert-view .content .chart-list .self .date {
+          margin-bottom: 10px;
+          font-size: 14px;
+          font-weight: normal;
+          color: #2b2b2d; }
+          .chert-view .content .chart-list .self .date span {
+            font-size: 13px;
+            margin-left: 16px;
+            color: #9b9b9b;
+            font-weight: 500; }
+      .chert-view .content .chart-list .system-msg {
+        width: 138px;
+        min-height: 47px;
+        text-align: center;
+        border-radius: 5px;
+        background-color: #f3f3f3;
+        font-size: 13px;
+        padding: 5px;
+        color: #9b9b9b;
+        font-weight: 500;
+        margin: 0 auto 30px; }
+        .chert-view .content .chart-list .system-msg .date {
+          margin-bottom: 3px; }
+    .chert-view .content .footer {
+      overflow: hidden;
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      width: 597px;
+      min-height: 153px;
+      background-color: #fafafa;
+      border-top: solid 1px #f3f3f3;
+      padding: 26px 20px 15px; }
+      .chert-view .content .footer #content {
+        float: left;
+        display: block;
+        width: 100%;
+        height: 48px;
+        border-radius: 5px;
+        background-color: #ffffff;
+        resize: none;
+        padding: 14px 10px;
+        border: solid 1px #b9b9b9;
+        overflow: hidden;
+        word-wrap: break-word; }
+      .chert-view .content .footer #pre {
+        width: 100%;
+        position: absolute;
+        z-index: -100;
+        visibility: hidden; }
+      .chert-view .content .footer .btns {
+        float: left;
+        overflow: hidden;
+        width: 100%;
+        height: 44px;
+        margin-top: 20px; }
+        .chert-view .content .footer .btns .send-btn {
+          width: 256px;
+          height: 44px;
+          line-height: 44px; }
+        .chert-view .content .footer .btns .file-btn {
+          padding-left: 25px;
+          position: relative;
+          display: block;
+          width: 90px;
+          height: 44px;
+          line-height: 44px;
+          font-size: 14px;
+          font-weight: normal;
+          color: #2b2b2d;
+          float: left;
+          cursor: pointer; }
+          .chert-view .content .footer .btns .file-btn input {
+            cursor: pointer;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: block;
+            width: 100%;
+            height: 100%;
+            font-size: 100px;
+            opacity: 0; }
+          .chert-view .content .footer .btns .file-btn i {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            bottom: 0px;
+            margin: auto 0;
+            width: 21px;
+            height: 19px;
+            display: block;
+            background: url("../images/icon@2x/file-link@2x.png") center center no-repeat;
+            background-size: 21px 19px; }
+      .chert-view .content .footer .title {
+        font-size: 14px;
+        font-weight: 500;
+        color: #2b2b2d;
+        margin-bottom: 5px; }
+      .chert-view .content .footer .accept-info {
+        display: none;
+        text-align: center;
+        width: 100%;
+        overflow: hidden;
+        float: left;
+        margin-bottom: 35px; }
+        .chert-view .content .footer .accept-info h3 {
+          font-size: 20px;
+          font-weight: 500;
+          color: #01579b; }
+        .chert-view .content .footer .accept-info p {
+          font-size: 14px;
+          margin-top: 5px;
+          margin-bottom: 0;
+          font-weight: normal;
+          color: #b9b9b9; }
+      .chert-view .content .footer .select {
+        width: 100%;
+        margin-bottom: 30px;
+        overflow: hidden;
+        float: left; }
+        .chert-view .content .footer .select h3 {
+          font-size: 14px;
+          font-weight: 500;
+          color: #2b2b2d;
+          margin-bottom: 5px; }
+        .chert-view .content .footer .select select {
+          width: 100%; }
+        .chert-view .content .footer .select .select2 {
+          margin-bottom: 0px !important;
+          margin-right: 0px !important; }
+          .chert-view .content .footer .select .select2 .select2 .selection, .chert-view .content .footer .select .select2 .select2-selection--single, .chert-view .content .footer .select .select2 .select2-selection__rendered, .chert-view .content .footer .select .select2 .select2-selection__arrow {
+            height: 40px !important;
+            outline: none !important;
+            line-height: 40px !important; }
+          .chert-view .content .footer .select .select2 .select2-selection--single {
+            border: solid 1px #dedddf !important; }
+
 .desktop {
   color: #fff;
   width: 100%;

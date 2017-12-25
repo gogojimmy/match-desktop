@@ -2325,6 +2325,481 @@ header
     padding: 3px
 
 
+//新訊息-pop
+.new-message-pop
+  display: none
+  width: 328px
+  height: 454px
+  position: absolute
+  top: 47px
+  left: 68%
+  z-index: 99
+  .section
+    width: 15px
+    height: 15px
+    position: absolute
+    top: 4px
+    z-index: 2
+    background-color: #ffffff
+    border-left: solid 1px #dedddf
+    border-top: solid 1px #dedddf
+    right: 70px
+    transform: rotate(45deg)
+  .content
+    z-index: 1
+    position: absolute
+    bottom: 0px
+    left: 0px
+    width: 328px
+    height: 443px
+    background-color: #ffffff
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.11)
+    border: solid 1px #dedddf
+    border-radius: 5px
+    .head
+      padding: 30px 15px 0
+      overflow: hidden
+      margin-bottom: 10px
+      h4
+        font-size: 15px
+        font-weight: 500
+        color: $font-color
+      a
+        font-size: 14px
+        font-weight: normal
+        color: $font-color
+    ul
+      padding: 0 15px
+      height: 380px
+      width: 100%
+      display: block
+      overflow: hidden
+      overflow-y: auto
+      li
+        list-style: none
+        position: relative
+        padding-top: 24px
+        height: 92px
+        border-top: 2px solid #dedddf
+        img
+          width: 54px
+          height: 54px
+          float: left
+          display: block
+        .info
+          float: left
+          width: 205px
+          margin-left: 20px
+          h3
+            font-size: 15px
+            font-weight: 500
+            color: $font-color
+          h4
+            font-size: 14px
+            margin-top: 5px
+            color: #4a4a4a
+            font-weight: normal
+          p
+            font-size: 13px
+            margin-top: 3px
+            font-weight: normal
+            width: 100%
+            text-overflow: ellipsis
+            white-space: nowrap
+            overflow: hidden
+            color: #9b9b9b
+        .date
+          position: absolute
+          top: 20px
+          right: 0px
+          font-size: 13px
+          color: #9b9b9b
+          font-weight: normal
+
+
+//站內信
+.message-list
+  width: 774px
+  margin: 0 auto 56px
+  .head
+    width: 774px
+    height: 58px
+    background-image: linear-gradient(97deg, #fcfcfc, #f3f3f3)
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.06)
+    border: solid 1px #e9e9e9
+    margin: 20px 0 30px
+    h3
+      font-size: 20px
+      margin-top: 18px
+      margin-left: 20px
+      font-weight: 500
+      float: left
+      color: $font-color
+    .remove
+      display: none
+      float: right
+      font-size: 14px
+      cursor: pointer
+      margin-top: 20px
+      margin-right: 20px
+      font-weight: normal
+      i
+        width: 12px
+        height: 16px
+        display: inline-block
+        background: url('../images/icon@2x/trashcan@2x.png') center center no-repeat
+        background-size: 12px 16px
+        float: left
+        margin-right: 10px
+        margin-top: 1px
+  .head1
+    background-image: linear-gradient(262deg, #fffefd, #fff6f5)
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.06)
+    border: solid 1px #fbe3e0
+  .content
+    margin-top: 30px
+    width: 774px
+    min-height: 803px
+    border: solid 1px #dedddf
+    li
+      position: relative
+      padding-left: 52px
+      height: 97px
+      list-style: none
+      border-bottom: solid 1px #e9e9e9
+      &:hover
+        background-color: #f2f2f2
+      .checkbox-box
+        width: 52px
+        height: 100%
+        position: absolute
+        text-align: center
+        top: 0
+        left: 0
+        label.checkbox-xs
+          margin-top: 45px
+    a
+      padding-top: 15px
+      display: block
+      .img-circle
+        width: 60px
+        height: 60px
+        float: left
+      .info
+        width: 300px
+        float: left
+        margin-left: 20px
+        h3
+          font-size: 16px
+          font-weight: 500
+          color: $font-color
+        h4
+          font-size: 14px
+          margin-top: 10px
+          font-weight: normal
+          color: #4a4a4a
+        p
+          font-size: 13px
+          white-space: nowrap
+          text-overflow: ellipsis
+          overflow: hidden
+          margin-top: 3px
+          font-weight: normal
+          color: #9b9b9b
+      .date
+        position: absolute
+        top: 10px
+        right: 32px
+        font-size: 14px
+        font-weight: normal
+        color: #9b9b9b
+  li.new .date::after
+    width: 8px
+    height: 8px
+    background-color: #c62828
+    border-radius: 50%
+    position: absolute
+    content: ''
+    top: 0px
+    bottom: 0px
+    margin: auto 0
+    right: -15px
+
+
+
+
+
+
+
+
+// 站內信-聊天窗口
+.chert-view
+  width: 598px
+  z-index: 99
+  height: 100%
+  position: fixed
+  top: 0px
+  right: 0
+  padding-top: 58px
+  .content
+    height: 100%
+    background-color: #ffffff
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.09)
+    border: solid 1px #dedddf
+    .head
+      height: 60px
+      text-align: right
+      .close
+        width: 60px
+        height: 60px
+        margin-right: 15px
+        background: url("../images/icon@2x/chart-close-icon@2x.png") center center no-repeat
+        background-size: 12px 12px
+        opacity: 1
+    .chart-list
+      height: 100%
+      padding: 0 40px
+      overflow: hidden
+      overflow-y: auto
+      .inquiry
+        position: relative
+        width: 100%
+        height: 72px
+        padding: 15px 20px
+        background-color: #f3f3f3
+        border: solid 1px #dedddf
+        margin: 0 auto 56px
+        h3
+          width: 95px
+          font-size: 20px
+          font-weight: 500
+          color: $font-color
+          overflow-y: hidden
+          height: 22px
+          line-height: 22px
+          span
+            float: right
+            font-size: 13px
+            font-weight: normal
+        p
+          font-size: 15px
+          font-weight: normal
+          color: #00559d
+          margin-top: 5px
+        .btn
+          position: absolute
+          width: 93px
+          padding: 0
+          top: 17px
+          right: 20px
+          color: #fff
+          font-weight: 500
+          line-height: 39px
+          height: 39px
+          border-radius: 5px
+        .refuse
+          background-color: #c62828
+        .accept
+          background-color: #00559d
+          right: 133px
+        .disabled
+          background-color: #b9b9b9
+      .they
+        width: 100%
+        overflow: hidden
+        margin-bottom: 30px
+        .con
+          padding-left: 74px
+          width: 100%
+          position: relative
+          .img-circle
+            position: absolute
+            left: 0px
+            top: 21px
+            width: 60px
+            height: 60px
+          .body
+            float: left
+            width: auto
+            min-height: 101px
+            border-radius: 5px
+            background-color: #fef4f3
+            padding: 15px 15px 10px
+          p
+            margin: 0
+            font-size: 14px
+            font-weight: normal
+            color: #2b2b2d
+            img
+              width: 80px
+          .date
+            margin-top: 22px
+            font-size: 13px
+            font-weight: 500
+            color: #9b9b9b
+      .self
+        width: 100%
+        padding-left: 74px
+        margin-bottom: 30px
+        overflow: hidden
+        .con
+          float: right
+          width: auto
+          min-height: 93px
+          border-radius: 5px
+          background-color: #f3f3f3
+          padding: 15px
+        p
+          font-size: 14px
+          font-weight: normal
+          color: $font-color
+          img
+            width: 80px
+        .date
+          margin-bottom: 10px
+          font-size: 14px
+          font-weight: normal
+          color: #2b2b2d
+          span
+            font-size: 13px
+            margin-left: 16px
+            color: #9b9b9b
+            font-weight: 500
+      .system-msg
+        width: 138px
+        min-height: 47px
+        text-align: center
+        border-radius: 5px
+        background-color: #f3f3f3
+        font-size: 13px
+        padding: 5px
+        color: #9b9b9b
+        font-weight: 500
+        margin: 0 auto 30px
+        .date
+          margin-bottom: 3px
+    .footer
+      overflow: hidden
+      position: absolute
+      bottom: 0px
+      right: 0px
+      width: 597px
+      min-height: 153px
+      background-color: #fafafa
+      border-top: solid 1px #f3f3f3
+      padding: 26px 20px 15px
+      #content
+        float: left
+        display: block
+        width: 100%
+        height: 48px
+        border-radius: 5px
+        background-color: #ffffff
+        resize: none
+        padding: 14px 10px
+        border: solid 1px #b9b9b9
+        overflow: hidden
+        word-wrap: break-word
+      #pre
+        width: 100%
+        position: absolute
+        z-index: -100
+        visibility: hidden
+      .btns
+        float: left
+        overflow: hidden
+        width: 100%
+        height: 44px
+        margin-top: 20px
+        .send-btn
+          width: 256px
+          height: 44px
+          line-height: 44px
+        .file-btn
+          padding-left: 25px
+          position: relative
+          display: block
+          width: 90px
+          height: 44px
+          line-height: 44px
+          font-size: 14px
+          font-weight: normal
+          color: $font-color
+          float: left
+          cursor: pointer
+          input
+            cursor: pointer
+            position: absolute
+            top: 0px
+            left: 0px
+            display: block
+            width: 100%
+            height: 100%
+            font-size: 100px
+            opacity: 0
+          i
+            position: absolute
+            left: 0px
+            top: 0px
+            bottom: 0px
+            margin: auto 0
+            width: 21px
+            height: 19px
+            display: block
+            background: url("../images/icon@2x/file-link@2x.png") center center no-repeat
+            background-size: 21px 19px
+      .title
+        font-size: 14px
+        font-weight: 500
+        color: $font-color
+        margin-bottom: 5px
+      .accept-info
+        display: none
+        text-align: center
+        width: 100%
+        overflow: hidden
+        float: left
+        margin-bottom: 35px
+        h3
+          font-size: 20px
+          font-weight: 500
+          color: #01579b
+        p
+          font-size: 14px
+          margin-top: 5px
+          margin-bottom: 0
+          font-weight: normal
+          color: #b9b9b9
+      .select
+        width: 100%
+        margin-bottom: 30px
+        overflow: hidden
+        float: left
+        h3
+          font-size: 14px
+          font-weight: 500
+          color: $font-color
+          margin-bottom: 5px
+        select
+          width: 100%
+        .select2
+          margin-bottom: 0px!important
+          margin-right: 0px!important
+          .select2 .selection,.select2-selection--single,.select2-selection__rendered,.select2-selection__arrow
+            height: 40px!important
+            outline: none!important
+            line-height: 40px!important
+          .select2-selection--single
+            border: solid 1px #dedddf!important
+
+
+
+
+
+
+
+
+
 
 //主体内容结束
 
