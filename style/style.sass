@@ -2561,123 +2561,133 @@ header
       padding: 0 40px
       overflow: hidden
       overflow-y: auto
-      .inquiry
-        position: relative
-        width: 100%
-        height: 72px
-        padding: 15px 20px
-        background-color: #f3f3f3
-        border: solid 1px #dedddf
-        margin: 0 auto 56px
-        h3
-          width: 95px
-          font-size: 20px
-          font-weight: 500
-          color: $font-color
-          overflow-y: hidden
-          height: 22px
-          line-height: 22px
-          span
-            float: right
-            font-size: 13px
-            font-weight: normal
-        p
-          font-size: 15px
-          font-weight: normal
-          color: #00559d
-          margin-top: 5px
-        .btn
-          position: absolute
-          width: 93px
-          padding: 0
-          top: 17px
-          right: 20px
-          color: #fff
-          font-weight: 500
-          line-height: 39px
-          height: 39px
-          border-radius: 5px
-        .refuse
-          background-color: #c62828
-        .accept
-          background-color: #00559d
-          right: 133px
-        .disabled
-          background-color: #b9b9b9
-      .they
-        width: 100%
+      .chart
+        padding: 0
+        margin: 0
+        display: block
         overflow: hidden
-        margin-bottom: 30px
-        .con
-          padding-left: 74px
-          width: 100%
+        li
+          list-style: none
+        .inquiry
           position: relative
-          .img-circle
-            position: absolute
-            left: 0px
-            top: 21px
-            width: 60px
-            height: 60px
-          .body
-            float: left
-            width: auto
-            min-height: 101px
-            border-radius: 5px
-            background-color: #fef4f3
-            padding: 15px 15px 10px
+          width: 100%
+          height: 72px
+          padding: 15px 20px
+          background-color: #f3f3f3
+          border: solid 1px #dedddf
+          margin: 0 auto 56px
+          h3
+            overflow: hidden
+            line-height: 22px
+            height: 22px
+              color: $font-color
+            span:first-child
+              font-size: 20px
+              font-weight: 500
+              margin-right: 10px
+            span
+              float: left
+              font-size: 13px
+              font-weight: normal
           p
-            margin: 0
+            font-size: 15px
+            font-weight: normal
+            color: #00559d
+            margin-top: 5px
+          .btn
+            position: absolute
+            width: 93px
+            padding: 0
+            top: 17px
+            right: 20px
+            color: #fff
+            font-weight: 500
+            line-height: 39px
+            height: 39px
+            border-radius: 5px
+          .refuse
+            background-color: #c62828
+          .accept
+            background-color: #00559d
+            right: 133px
+          .disabled
+            background-color: #b9b9b9
+        .they
+          width: 100%
+          overflow: hidden
+          margin-bottom: 30px
+          .con
+            padding-left: 74px
+            width: 100%
+            position: relative
+            .img-circle
+              position: absolute
+              left: 0px
+              top: 21px
+              width: 60px
+              height: 60px
+            .body
+              float: left
+              width: auto
+              min-height: 101px
+              border-radius: 5px
+              background-color: #fef4f3
+              padding: 15px 15px 10px
+            p
+              margin: 0
+              font-size: 14px
+              font-weight: normal
+              color: #2b2b2d
+              img
+                width: 80px
+            .date
+              margin-top: 22px
+              font-size: 13px
+              font-weight: 500
+              color: #9b9b9b
+        .self
+          width: 100%
+          padding-left: 74px
+          margin-bottom: 30px
+          overflow: hidden
+          .con
+            float: right
+            width: auto
+            min-height: 93px
+            border-radius: 5px
+            background-color: #f3f3f3
+            padding: 15px
+          p
             font-size: 14px
             font-weight: normal
-            color: #2b2b2d
+            color: $font-color
             img
               width: 80px
           .date
-            margin-top: 22px
-            font-size: 13px
-            font-weight: 500
-            color: #9b9b9b
-      .self
-        width: 100%
-        padding-left: 74px
-        margin-bottom: 30px
-        overflow: hidden
-        .con
-          float: right
-          width: auto
-          min-height: 93px
+            margin-bottom: 10px
+            font-size: 14px
+            font-weight: normal
+            color: #2b2b2d
+            span
+              font-size: 13px
+              margin-left: 16px
+              color: #9b9b9b
+              font-weight: 500
+        .sys
+          width: 138px
+          min-height: 47px
+          text-align: center
           border-radius: 5px
           background-color: #f3f3f3
-          padding: 15px
-        p
-          font-size: 14px
-          font-weight: normal
-          color: $font-color
-          img
-            width: 80px
-        .date
-          margin-bottom: 10px
-          font-size: 14px
-          font-weight: normal
-          color: #2b2b2d
-          span
-            font-size: 13px
-            margin-left: 16px
-            color: #9b9b9b
-            font-weight: 500
-      .system-msg
-        width: 138px
-        min-height: 47px
-        text-align: center
-        border-radius: 5px
-        background-color: #f3f3f3
-        font-size: 13px
-        padding: 5px
-        color: #9b9b9b
-        font-weight: 500
-        margin: 0 auto 30px
-        .date
-          margin-bottom: 3px
+          font-size: 13px
+          padding: 5px
+          color: #9b9b9b
+          font-weight: 500
+          margin: 0 auto 30px
+          p
+            margin-bottom: 0px
+          .date
+            margin-bottom: 3px
     .footer
       overflow: hidden
       position: absolute
@@ -2792,7 +2802,22 @@ header
           .select2-selection--single
             border: solid 1px #dedddf!important
 
-
+// 聊天modal
+.modal-show
+  .modal-header
+    border-bottom: 0
+  .modal-content,.modal-dialog
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    width: 305px!important
+    margin: auto !important
+    height: 200px!important
+    overflow: hidden!important
+    width: 100%
+    margin: 0 auto
 
 
 

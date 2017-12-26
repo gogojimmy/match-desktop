@@ -2495,123 +2495,133 @@ header {
       padding: 0 40px;
       overflow: hidden;
       overflow-y: auto; }
-      .chert-view .content .chart-list .inquiry {
-        position: relative;
-        width: 100%;
-        height: 72px;
-        padding: 15px 20px;
-        background-color: #f3f3f3;
-        border: solid 1px #dedddf;
-        margin: 0 auto 56px; }
-        .chert-view .content .chart-list .inquiry h3 {
-          width: 95px;
-          font-size: 20px;
-          font-weight: 500;
-          color: #2b2b2d;
-          overflow-y: hidden;
-          height: 22px;
-          line-height: 22px; }
-          .chert-view .content .chart-list .inquiry h3 span {
-            float: right;
-            font-size: 13px;
-            font-weight: normal; }
-        .chert-view .content .chart-list .inquiry p {
-          font-size: 15px;
-          font-weight: normal;
-          color: #00559d;
-          margin-top: 5px; }
-        .chert-view .content .chart-list .inquiry .btn {
-          position: absolute;
-          width: 93px;
-          padding: 0;
-          top: 17px;
-          right: 20px;
-          color: #fff;
-          font-weight: 500;
-          line-height: 39px;
-          height: 39px;
-          border-radius: 5px; }
-        .chert-view .content .chart-list .inquiry .refuse {
-          background-color: #c62828; }
-        .chert-view .content .chart-list .inquiry .accept {
-          background-color: #00559d;
-          right: 133px; }
-        .chert-view .content .chart-list .inquiry .disabled {
-          background-color: #b9b9b9; }
-      .chert-view .content .chart-list .they {
-        width: 100%;
-        overflow: hidden;
-        margin-bottom: 30px; }
-        .chert-view .content .chart-list .they .con {
-          padding-left: 74px;
+      .chert-view .content .chart-list .chart {
+        padding: 0;
+        margin: 0;
+        display: block;
+        overflow: hidden; }
+        .chert-view .content .chart-list .chart li {
+          list-style: none; }
+        .chert-view .content .chart-list .chart .inquiry {
+          position: relative;
           width: 100%;
-          position: relative; }
-          .chert-view .content .chart-list .they .con .img-circle {
+          height: 72px;
+          padding: 15px 20px;
+          background-color: #f3f3f3;
+          border: solid 1px #dedddf;
+          margin: 0 auto 56px; }
+          .chert-view .content .chart-list .chart .inquiry h3 {
+            overflow: hidden;
+            line-height: 22px;
+            height: 22px;
+              height-color: #2b2b2d; }
+            .chert-view .content .chart-list .chart .inquiry h3 span:first-child {
+              font-size: 20px;
+              font-weight: 500;
+              margin-right: 10px; }
+            .chert-view .content .chart-list .chart .inquiry h3 span {
+              float: left;
+              font-size: 13px;
+              font-weight: normal; }
+          .chert-view .content .chart-list .chart .inquiry p {
+            font-size: 15px;
+            font-weight: normal;
+            color: #00559d;
+            margin-top: 5px; }
+          .chert-view .content .chart-list .chart .inquiry .btn {
             position: absolute;
-            left: 0px;
-            top: 21px;
-            width: 60px;
-            height: 60px; }
-          .chert-view .content .chart-list .they .con .body {
-            float: left;
+            width: 93px;
+            padding: 0;
+            top: 17px;
+            right: 20px;
+            color: #fff;
+            font-weight: 500;
+            line-height: 39px;
+            height: 39px;
+            border-radius: 5px; }
+          .chert-view .content .chart-list .chart .inquiry .refuse {
+            background-color: #c62828; }
+          .chert-view .content .chart-list .chart .inquiry .accept {
+            background-color: #00559d;
+            right: 133px; }
+          .chert-view .content .chart-list .chart .inquiry .disabled {
+            background-color: #b9b9b9; }
+        .chert-view .content .chart-list .chart .they {
+          width: 100%;
+          overflow: hidden;
+          margin-bottom: 30px; }
+          .chert-view .content .chart-list .chart .they .con {
+            padding-left: 74px;
+            width: 100%;
+            position: relative; }
+            .chert-view .content .chart-list .chart .they .con .img-circle {
+              position: absolute;
+              left: 0px;
+              top: 21px;
+              width: 60px;
+              height: 60px; }
+            .chert-view .content .chart-list .chart .they .con .body {
+              float: left;
+              width: auto;
+              min-height: 101px;
+              border-radius: 5px;
+              background-color: #fef4f3;
+              padding: 15px 15px 10px; }
+            .chert-view .content .chart-list .chart .they .con p {
+              margin: 0;
+              font-size: 14px;
+              font-weight: normal;
+              color: #2b2b2d; }
+              .chert-view .content .chart-list .chart .they .con p img {
+                width: 80px; }
+            .chert-view .content .chart-list .chart .they .con .date {
+              margin-top: 22px;
+              font-size: 13px;
+              font-weight: 500;
+              color: #9b9b9b; }
+        .chert-view .content .chart-list .chart .self {
+          width: 100%;
+          padding-left: 74px;
+          margin-bottom: 30px;
+          overflow: hidden; }
+          .chert-view .content .chart-list .chart .self .con {
+            float: right;
             width: auto;
-            min-height: 101px;
+            min-height: 93px;
             border-radius: 5px;
-            background-color: #fef4f3;
-            padding: 15px 15px 10px; }
-          .chert-view .content .chart-list .they .con p {
-            margin: 0;
+            background-color: #f3f3f3;
+            padding: 15px; }
+          .chert-view .content .chart-list .chart .self p {
             font-size: 14px;
             font-weight: normal;
             color: #2b2b2d; }
-            .chert-view .content .chart-list .they .con p img {
+            .chert-view .content .chart-list .chart .self p img {
               width: 80px; }
-          .chert-view .content .chart-list .they .con .date {
-            margin-top: 22px;
-            font-size: 13px;
-            font-weight: 500;
-            color: #9b9b9b; }
-      .chert-view .content .chart-list .self {
-        width: 100%;
-        padding-left: 74px;
-        margin-bottom: 30px;
-        overflow: hidden; }
-        .chert-view .content .chart-list .self .con {
-          float: right;
-          width: auto;
-          min-height: 93px;
+          .chert-view .content .chart-list .chart .self .date {
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: normal;
+            color: #2b2b2d; }
+            .chert-view .content .chart-list .chart .self .date span {
+              font-size: 13px;
+              margin-left: 16px;
+              color: #9b9b9b;
+              font-weight: 500; }
+        .chert-view .content .chart-list .chart .sys {
+          width: 138px;
+          min-height: 47px;
+          text-align: center;
           border-radius: 5px;
           background-color: #f3f3f3;
-          padding: 15px; }
-        .chert-view .content .chart-list .self p {
-          font-size: 14px;
-          font-weight: normal;
-          color: #2b2b2d; }
-          .chert-view .content .chart-list .self p img {
-            width: 80px; }
-        .chert-view .content .chart-list .self .date {
-          margin-bottom: 10px;
-          font-size: 14px;
-          font-weight: normal;
-          color: #2b2b2d; }
-          .chert-view .content .chart-list .self .date span {
-            font-size: 13px;
-            margin-left: 16px;
-            color: #9b9b9b;
-            font-weight: 500; }
-      .chert-view .content .chart-list .system-msg {
-        width: 138px;
-        min-height: 47px;
-        text-align: center;
-        border-radius: 5px;
-        background-color: #f3f3f3;
-        font-size: 13px;
-        padding: 5px;
-        color: #9b9b9b;
-        font-weight: 500;
-        margin: 0 auto 30px; }
-        .chert-view .content .chart-list .system-msg .date {
-          margin-bottom: 3px; }
+          font-size: 13px;
+          padding: 5px;
+          color: #9b9b9b;
+          font-weight: 500;
+          margin: 0 auto 30px; }
+          .chert-view .content .chart-list .chart .sys p {
+            margin-bottom: 0px; }
+          .chert-view .content .chart-list .chart .sys .date {
+            margin-bottom: 3px; }
     .chert-view .content .footer {
       overflow: hidden;
       position: absolute;
@@ -2725,6 +2735,21 @@ header {
             line-height: 40px !important; }
           .chert-view .content .footer .select .select2 .select2-selection--single {
             border: solid 1px #dedddf !important; }
+
+.modal-show .modal-header {
+  border-bottom: 0; }
+.modal-show .modal-content, .modal-show .modal-dialog {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 305px !important;
+  margin: auto !important;
+  height: 200px !important;
+  overflow: hidden !important;
+  width: 100%;
+  margin: 0 auto; }
 
 .desktop {
   color: #fff;
