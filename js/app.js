@@ -170,6 +170,15 @@ $(function(){
     })
     // 表单部分结束
     // 站內信开始
+        // 打开聊天窗口
+        $(".message-list .content a").on('click', function(){
+            $(".chert-view").animate({right: 0 + 'px'}, 200);
+        });
+        // 关闭聊天窗口
+        $(".chert-view .content .head .close").on('click', function(){
+            $(".chert-view").animate({right: '-600px'}, 200);
+        });
+
         // email显示新信息
         $("header .email").on('click', function(){
             $(".new-message-pop").css({'left': ($(this).offset().left - 225)+ 'px'}).toggle();

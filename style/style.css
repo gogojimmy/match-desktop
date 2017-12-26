@@ -2422,7 +2422,9 @@ header {
           margin-top: 45px; }
     .message-list .content a {
       padding-top: 15px;
-      display: block; }
+      display: block;
+      width: 100%;
+      height: 100%; }
       .message-list .content a .img-circle {
         width: 60px;
         height: 60px;
@@ -2473,7 +2475,7 @@ header {
   height: 100%;
   position: fixed;
   top: 0px;
-  right: 0;
+  right: -600px;
   padding-top: 58px; }
   .chert-view .content {
     height: 100%;
@@ -2514,7 +2516,7 @@ header {
             overflow: hidden;
             line-height: 22px;
             height: 22px;
-              height-color: #2b2b2d; }
+            color: #2b2b2d; }
             .chert-view .content .chart-list .chart .inquiry h3 span:first-child {
               font-size: 20px;
               font-weight: 500;
@@ -2736,9 +2738,9 @@ header {
           .chert-view .content .footer .select .select2 .select2-selection--single {
             border: solid 1px #dedddf !important; }
 
-.modal-show .modal-header {
+.chart-modal-show .modal-header {
   border-bottom: 0; }
-.modal-show .modal-content, .modal-show .modal-dialog {
+.chart-modal-show .modal-content, .chart-modal-show .modal-dialog {
   position: absolute;
   top: 0;
   bottom: 0;
