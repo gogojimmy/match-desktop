@@ -354,8 +354,17 @@ $(function(){
             });
         }
 
-
     // swiper 部分 结束
+
+    // 常見問題 开始
+        $(".help .list>li>h2").on('click', function(e){
+            $(this).parent().toggleClass('open');
+            $(".sub-list li").removeClass('open');
+        });
+        $(".sub-list li .tit").on('click', function(e){
+            $(this).parent().toggleClass('open');
+        });
+    // 常見問題 结束
 
     // 全局性事件处理 开始
     $(document).on('click', function(e){
