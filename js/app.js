@@ -113,6 +113,10 @@ $(function(){
                 $(this).siblings().removeClass('on');
             }
         })
+        $(".send-work-page .input-group > .goods > span").on('click', function(){
+            $(this).removeClass('on').siblings('input').val('')
+        })
+
         // 合作時間
         $(".send-work-page .cooperation-date").on('change', function(){
             if($(this).val()==1){
@@ -166,8 +170,13 @@ $(function(){
 
         // 儲存網美按钮
         $(".net-desc .rectangle").on('click', function(){
-        $(this).addClass('on').find('span').text('已儲存');
-    })
+            if($(this).hasClass('on')){
+                $(this).removeClass('on').find('span').text('儲存網美');
+            }else{
+                $(this).addClass('on').find('span').text('已儲存');
+            }
+
+        })
     // 表单部分结束
     // 站內信开始
         // 打开聊天窗口
@@ -198,6 +207,7 @@ $(function(){
         // 站內信-删除
         $(".message-list .head .remove").on('click', function(){
             $(".message-list .content li input:checked").parent().parent().remove();
+            $(this).hide();
         });
 
         // 接受 or 拒绝
@@ -250,6 +260,102 @@ $(function(){
         resizeChartScroll();
 
     // 站內信结束
+
+    // 工作洽談進度 开始
+        // 展开-收起
+        $(".work-negotiate .all-work .slider-btn").on('click', function(){
+            $(this).parent().parent().toggleClass('open');
+        });
+        // 设置删除列表索引
+        $(".slider-box .btns .remove").on('click', function(){
+            var index = $(this).data('index');
+            $(".modal-delete .remove").attr('data-index', index);
+        });
+        // 删除工作
+        $(".modal-delete .remove").on('click', function(){
+            $('.work-negotiate .all-work ul li').eq($(this).data('index')).remove();
+            $(".modal-delete").modal('hide');
+        });
+
+    // 工作洽談進度 结束
+
+    // 邀約的網美1 start
+        // 监听checkbox
+        $(".anInvitation-net li  input[type=checkbox]").on('change', function(){
+            var checkedLen = $(".anInvitation-net li  input:checked").length
+            if(checkedLen>0){
+                $(".anInvitation-net .remove").show();
+            }else{
+                $(".anInvitation-net .remove").hide();
+            }
+        });
+        // 删除
+        $(".anInvitation-remove").on('click', function(){
+            $(".anInvitation-net li  input:checked").parent().parent().remove();
+            $('.anInvitation-net .remove').hide();
+            // show modal
+            $("#modal-delete").modal('hide');
+        })
+    // 邀約的網美1 end
+
+    // 儲存的網美+ 收藏的工作 开始
+        // 删除
+        $(".storage-net .remove,.collection-work .remove").on('click', function(){
+            $(this).parent().parent().remove();
+        })
+    // 儲存的網美+ 收藏的工作 结束
+
+
+    // swiper 部分 开始
+        // 首页banner轮播
+        if($(".index-banner .swiper-container").length > 0){
+            new Swiper ('.index-banner .swiper-container', {
+                loop: true,
+                pagination: {
+                    clickable: true,
+                    el: '.index-banner .swiper-pagination',
+                }
+            });
+        }
+
+        // 最新网美轮播
+        if($(".new-net .swiper-container").length > 0){
+            new Swiper('.new-net .swiper-container', {
+                slidesPerView: 4,
+                slidesPerColumn: 2,
+                spaceBetween: 39,
+                navigation: {
+                    nextEl: '.new-net .swiper-button-next'
+                }
+            });
+        }
+
+        // 商家介紹 or 工作介紹
+        if($(".business-introduce .banner .swiper-container").length > 0) {
+            new Swiper('.business-introduce .banner .swiper-container', {
+                loop: true,
+                navigation: {
+                    nextEl: '.business-introduce .swiper-button-next',
+                    prevEl: '.business-introduce .swiper-button-prev'
+                }
+            });
+        }
+
+        // 推薦工作
+        if($(".search-work-desc .list2 .swiper-container").length > 0) {
+            new Swiper('.search-work-desc .list2 .swiper-container', {
+                slidesPerView: 3,
+                slidesPerColumn: 1,
+                spaceBetween: 20,
+                navigation: {
+                    nextEl: '.list2 .swiper-button-next',
+                    prevEl: '.list2 .swiper-button-prev'
+                }
+            });
+        }
+
+
+    // swiper 部分 结束
 
     // 全局性事件处理 开始
     $(document).on('click', function(e){

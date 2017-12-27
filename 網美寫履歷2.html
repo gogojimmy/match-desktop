@@ -136,7 +136,7 @@
                 <div class="clearfix"></div>
                 <input type="text" placeholder="36C-24-35" class="form-control">
                 <span>
-                    <label class="help">如何測量三圍</label>
+                    <label style="cursor: pointer" data-toggle="modal" data-target="#modalShow" class="help">如何測量三圍</label>
                 </span>
             </div>
             <a class="jump" href="">略過</a>
@@ -171,6 +171,27 @@
     </div>
 </div>
 <!--register end-->
+
+<!--modal-->
+<div id="modalShow" class="modal fade modal-show" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="net-register-sorry">
+                    <h3 style="margin-top: 30px;">如何測量三圍？</h3>
+                    <p style="text-align:left;padding-left: 100px">胸圍：乳房至高點，水平測量一圈</p>
+                    <p style="text-align:left;padding-left: 100px">腰圍：肚臍眼上方3公分，水平測量一圈</p>
+                    <p style="text-align:left;padding-left: 100px">臀圍：臀部向後最突出部位,水平測量一圈</p>
+                    <p style="text-align:left;padding-left: 100px;margin-top: 25px">單位：吋</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <script src="lib/jquery/1.12.4/jquery.min.js"></script>

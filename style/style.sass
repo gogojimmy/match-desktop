@@ -65,6 +65,28 @@ input+label.checkbox-xs
 input:checked+label.checkbox-xs::before
   background: url("../images/icon@2x/checkbox-checked@2x.png") 0 0 no-repeat
   background-size: 17px 17px
+//tag
+a.tag
+  border-radius: 22.5px
+  width: 78px
+  height: 40px
+  text-align: center
+  line-height: 40px
+  display: inline-block
+  font-size: 13px
+  color: $font-color!important
+  font-weight: 500
+  cursor: pointer
+  background-color: #e9e9e9
+  &.on
+    background-color: #fbdbd7
+  &:hover
+    background-color: #fbdbd7
+  &:active
+    background-color: #fbdbd7
+
+
+
 
 // switch
 .switch
@@ -916,6 +938,7 @@ header
         font-weight: 500
         color: $font-color
         margin-top: 40px
+        margin-bottom: 5px
       p
         color: #9b9b9b
         font-size: 13px
@@ -1834,7 +1857,7 @@ header
       font-weight: bold
     .list
       overflow: hidden
-    label
+    a.tag
       float: left
       margin: 0 10px 10px 0
       &:nth-of-type(12n+0)
@@ -2061,7 +2084,7 @@ header
       width: 262px
       height: 52px
       line-height: 52px
-    .checkbox-list>.checkbox
+    .checkbox-list>a.tag
       float: left
       margin: 0 9px 9px 0
       &:nth-of-type(9n+0)
@@ -2144,7 +2167,7 @@ header
       font-weight: bold
     .list
       overflow: hidden
-    label
+    a.tag
       float: left
       margin: 0 10px 10px 0
       &:nth-of-type(12n+0)
@@ -2281,7 +2304,7 @@ header
         margin-bottom: 20px
     .checkbox-list
       overflow: hidden
-      label
+      a.tag
         width: 77px
         float: left
         margin: 0 10px 10px 0
@@ -2293,25 +2316,25 @@ header
     width: 100%
     position: relative
     height:  318px
+    .swiper-button-next
+      width: 70px
+      height: 70px
+      background: url("../images/icon@2x/page-btn-icon@2x.png") center center no-repeat
+      background-size: 70px
+      top: 47%
+      right: -33px
+    .swiper-button-prev
+      width: 70px
+      height: 70px
+      background: url("../images/icon@2x/page-btn-icon1@2x.png") center center no-repeat
+      background-size: 70px
+      top: 47%
+      left: -33px
   .public-list
     overflow: visible
     display: flex
     li
       margin-bottom: 0px!important
-  .swiper-button-next
-    width: 70px
-    height: 70px
-    background: url("../images/icon@2x/page-btn-icon@2x.png") center center no-repeat
-    background-size: 70px
-    top: 47%
-    right: -33px
-  .swiper-button-prev
-    width: 70px
-    height: 70px
-    background: url("../images/icon@2x/page-btn-icon1@2x.png") center center no-repeat
-    background-size: 70px
-    top: 47%
-    left: -33px
 
 //我的履歷2
 .www-box
@@ -2416,7 +2439,6 @@ header
           color: #9b9b9b
           font-weight: normal
 
-
 //站內信
 .message-list
   width: 774px
@@ -2478,60 +2500,54 @@ header
         left: 0
         label.checkbox-xs
           margin-top: 45px
-    a
-      padding-top: 15px
-      display: block
-      width: 100%
-      height: 100%
-      .img-circle
-        width: 60px
-        height: 60px
-        float: left
-      .info
-        width: 300px
-        float: left
-        margin-left: 20px
-        h3
-          font-size: 16px
-          font-weight: 500
-          color: $font-color
-        h4
+      a
+        padding-top: 15px
+        display: block
+        width: 100%
+        height: 100%
+        .img-circle
+          width: 60px
+          height: 60px
+          float: left
+        .info
+          width: 300px
+          float: left
+          margin-left: 20px
+          h3
+            font-size: 16px
+            font-weight: 500
+            color: $font-color
+          h4
+            font-size: 14px
+            margin-top: 10px
+            font-weight: normal
+            color: #4a4a4a
+          p
+            font-size: 13px
+            white-space: nowrap
+            text-overflow: ellipsis
+            overflow: hidden
+            margin-top: 3px
+            font-weight: normal
+            color: #9b9b9b
+        .date
+          position: absolute
+          top: 10px
+          right: 32px
           font-size: 14px
-          margin-top: 10px
-          font-weight: normal
-          color: #4a4a4a
-        p
-          font-size: 13px
-          white-space: nowrap
-          text-overflow: ellipsis
-          overflow: hidden
-          margin-top: 3px
           font-weight: normal
           color: #9b9b9b
-      .date
-        position: absolute
-        top: 10px
-        right: 32px
-        font-size: 14px
-        font-weight: normal
-        color: #9b9b9b
-  li.new .date::after
-    width: 8px
-    height: 8px
-    background-color: #c62828
-    border-radius: 50%
-    position: absolute
-    content: ''
-    top: 0px
-    bottom: 0px
-    margin: auto 0
-    right: -15px
-
-
-
-
-
-
+    li.new .date::after
+      width: 8px
+      height: 8px
+      background-color: #c62828
+      border-radius: 50%
+      position: absolute
+      content: ''
+      top: 0px
+      bottom: 0px
+      margin: auto 0
+      right: -15px
 
 
 // 站內信-聊天窗口
@@ -2591,7 +2607,7 @@ header
               float: left
               font-size: 13px
               font-weight: normal
-          p
+          a
             font-size: 15px
             font-weight: normal
             color: #00559d
@@ -2822,6 +2838,609 @@ header
     margin: 0 auto
 
 
+//工作洽談進度1
+.work-negotiate
+  width: 989px
+  padding: 0 20px
+  margin: 0 auto
+  .all-work
+    padding-left: 0px
+    padding-right: 0px
+    width: 421px
+    h3
+      margin-top: 29px
+      font-size: 20px
+      font-weight: 500
+    ul
+      display: block
+      margin-top: 21px
+      li
+        margin-bottom: 10px
+        list-style: none
+        width: 100%
+        min-height: 82px
+        background-color: #f3f3f3
+        border: solid 1px #dedddf
+        .head
+          height: 32px
+          overflow: hidden
+          padding: 15px 20px 0
+          h4
+            font-size: 16px
+            color: #2b2b2d
+            font-weight: 500
+          .switch
+            margin-left: 15px
+            display: inline-block
+            input
+              display: none
+            label
+              margin-left: 0
+              width: 17px
+              height: 15px
+              background: url("../images/icon@2x/lock-icon@2x.png") center center no-repeat
+              background-size: 17px 15px
+              span
+                width: 80px
+                padding-left: 25px
+                height: 24px
+                line-height: 24px
+                left: inherit
+                opacity: 1
+            input:checked+label
+              background: url("../images/icon@2x/lock-icon1@2x.png") center center no-repeat
+              background-size: 17px 15px
+          .slider-btn
+            margin-top: 3px
+            cursor: pointer
+            float: right
+            display: block
+            width: 16px
+            height: 9px
+            background: url("../images/icon@2x/chevron-small-down2@2x.png") center center no-repeat
+            background-size: 16px 9px
+        .edit-btn
+          padding: 0 20px
+          display: none
+        .date-count
+          overflow: hidden
+          margin-top: 10px
+          padding: 0 20px
+          .date
+            font-size: 14px
+            font-weight: normal
+            color: #4a4a4a
+          .count
+            font-size: 13px
+            font-weight: normal
+            color: #2b2b2d
+            i
+              display: block
+              float: left
+              width: 8px
+              height: 13px
+              background: url("../images/icon@2x/pep@2x.png") center center no-repeat
+              background-size: 8px 13px
+              margin: 2px 10px 0 0
+        .slider-box
+          display: none
+          width: 100%
+          overflow: hidden
+          .progress-box
+            width: 100%
+            padding: 0 20px
+            overflow: hidden
+            .progress-bar
+              margin-top: 17px
+              width: 100%
+              height: 22px
+              overflow: hidden
+              border-radius: 5px
+              background-color: #fff
+              box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.19)
+              position: relative
+              span
+                display: block
+                float: left
+                height: 22px
+                &.bar1
+                  background-color: #01579b
+                &.bar2
+                  background-color: #81d4fa
+                &.bar3
+                  background-color: #c62828
+          .btns
+            padding: 0 20px
+            margin-top: 15px
+            overflow: hidden
+            button
+              font-size: 14px
+              font-weight: normal
+              background: none
+              border: none
+              text-align: right
+              padding: 0
+              color: #c62828
+              &:first-child
+                text-align: left
+                color: #4a4a4a
+          .list
+            padding: 0px
+            margin-top: 10px
+            width: 100%
+            border-top: solid 1px #dedddf
+            background-color: #fff
+            overflow: hidden
+            .item
+              width: 104.5px
+              padding: 20px 0 0 20px
+              height: 92px
+              float: left
+              border-right: solid 1px #dedddf
+              &:last-of-type
+                border-right: 0
+              .number
+                font-size: 23px
+                font-weight: normal
+                color: $font-color
+              a
+                position: relative
+                margin-top: 5px
+                display: block
+                color: #9b9b9b
+                font-size: 14px
+                padding-right: 13px
+                font-weight: 500
+                &:after
+                  width: 7px
+                  height: 12px
+                  display: block
+                  content: ''
+                  background: url("../images/icon@2x/jiantou@2x.png") center center no-repeat
+                  background-size: 7px 12px
+                  position: absolute
+                  top: 2px
+                  bottom: 0
+                  right: 15px
+                  margin: auto 0
+        &.open
+          .head>.slider-btn
+            background: url("../images/icon@2x/chevron-small-down3@2x.png") center center no-repeat
+            background-size: 16px 9px
+          .edit-btn,.slider-box
+            display: block
+  .success-work
+    margin-left: 39px
+    width: 489px
+    overflow: hidden
+    padding-left: 0
+    padding-right: 0
+    h3
+      overflow: hidden
+      margin-top: 80px
+      font-size: 20px
+      font-weight: 500
+      color: $font-color
+      margin-bottom: 5px
+      i
+        display: block
+        width: 18px
+        height: 18px
+        margin: 3px 0 10px 0
+        border-radius: 5px
+        float: left
+      span
+        float: left
+        margin-left: 10px
+    .tip
+      font-size: 14px
+      font-weight: normal
+      color: #4a4a4a
+      margin-top: 10px
+    ul
+      width: 100%
+      margin-top: 20px
+      overflow: hidden
+      li
+        list-style: none
+        width: 100%
+        height: 91px
+        background-color: #ffffff
+        border: solid 1px #e9e9e9
+        margin-bottom: 10px
+        a
+          overflow: hidden
+          float: left
+          display: block
+          &:last-of-type
+            padding-top: 16px
+            height: 100%
+            margin-left: 10px
+        .info
+          padding-top: 7px
+          float: left
+          margin-left: 20px
+          h4
+            font-size: 16px
+            font-weight: 500
+            color: $font-color
+          .date
+            font-size: 13px
+            margin-top: 5px
+            font-weight: normal
+            color: #9b9b9b
+            span
+              margin-right: 10px
+        .img-circle
+          float: left
+          width: 60px
+          height: 60px
+        .btn
+          float: left
+          margin-right: 5px
+          margin-top: 31px
+          width: 65px
+          height: 29px
+          font-size: 12px
+          line-height: 29px
+          margin-left: 10px
+
+@media screen and (max-width: 1000px)
+  .success-work
+    margin-left: 0!important
+
+//邀約的網美1
+.anInvitation-net,.work-Invitation
+  width: 774px
+  margin: 0 auto
+  h2
+    font-size: 20px
+    font-weight: 500
+    margin-top: 39px
+    margin-bottom: 30px
+    color: $font-color
+  .remove
+    display: none
+    font-size: 14px
+    font-weight: normal
+    border: 0px
+    background: none
+    margin-top: 0px
+    color: $font-color
+    i
+      width: 12px
+      height: 16px
+      display: inline-block
+      background: url('../images/icon@2x/trashcan@2x.png') center center no-repeat
+      background-size: 12px 16px
+      float: left
+      margin-right: 10px
+      margin-top: 1px
+  .list
+    margin-top: 10px
+    &>li
+      position: relative
+      padding-left: 52px
+      height: 97px
+      list-style: none
+      border: solid 1px #e9e9e9
+      margin-bottom: 10px
+      &:hover
+        background-color: #f2f2f2
+      .checkbox-box
+        width: 52px
+        height: 100%
+        position: absolute
+        text-align: center
+        top: 0
+        left: 0
+        label.checkbox-xs
+          margin-top: 45px
+      &>a
+        padding-top: 15px
+        display: block
+        width: 100%
+        height: 100%
+        .img-circle
+          width: 60px
+          height: 60px
+          float: left
+        .info
+          width: 300px
+          float: left
+          margin-left: 20px
+          h3
+            font-size: 16px
+            font-weight: 500
+            color: $font-color
+          h4
+            font-size: 14px
+            margin-top: 10px
+            font-weight: normal
+            color: #4a4a4a
+          .date
+            font-size: 13px
+            white-space: nowrap
+            text-overflow: ellipsis
+            overflow: hidden
+            margin-top: 3px
+            font-weight: normal
+            color: #9b9b9b
+            span
+              margin-right: 8px
+
+        .state
+          position: absolute
+          top: 10px
+          right: 32px
+          font-size: 14px
+          font-weight: normal
+          color: #9b9b9b
+      .btn
+        padding: 0px
+        width: 77px
+        height: 40px
+        line-height: 40px
+        position: absolute
+        right: 20px
+        top: 42px
+
+
+// 儲存的網美 + 收藏的工作
+.storage-net,.collection-work
+  width: 774px
+  margin: 0 auto
+  h2
+    font-size: 20px
+    margin-top: 47px
+    font-weight: 500
+    color: $font-color
+  .list
+    width: 100%
+    overflow: hidden
+    margin-top: 38px
+    border: solid 1px #e9e9e9
+    li
+      position: relative
+      list-style: none
+      width: 100%
+      height: 157px
+      overflow: hidden
+      border-bottom: solid 1px #e9e9e9
+      padding: 21px 20px
+      .info
+        float: left
+        margin-left: 30px
+        width: 300px
+        h3
+          font-size: 18px
+          font-weight: 500
+          color: $font-color
+        .tag
+          margin-top: 10px
+          background: url("../images/icon@2x/tag-icon@2x.png") 0 4px no-repeat
+          background-size: 23px 11px
+          padding-left: 34px
+          overflow: hidden
+          span
+            float: left
+            position: relative
+            color: #525252
+            font-size: 16px
+            display: block
+            padding-right: 14px
+            &::after
+              position: absolute
+              top: 0
+              bottom: 0
+              right: 7px
+              margin: auto 0
+              width: 2px
+              height: 2px
+              display: block
+              content: ''
+              border-radius: 50%
+              background-color: $font-color
+            &:last-of-type::after
+              display: none
+      .img-circle
+        float: left
+        width: 115px
+        height: 115px
+      .img
+        width: 157px
+        height: 157px
+      .btns
+        float: right
+        margin-top: 20px
+        .btn
+          display: block
+          width: 102px
+          line-height: 40px
+          height: 40px
+        .remove
+          margin-top: 10px
+          border: 0px
+          width: 102px
+          text-align: center
+          line-height: 40px
+          background: none
+      &:last-of-type
+        border-bottom: 0
+
+//收藏的工作
+.collection-work
+  .list
+    border: 0px
+    li
+      overflow: hidden
+      padding: 0
+      margin-bottom: 20px
+      border: solid 1px #e9e9e9
+      .img
+        float: left
+      .info
+        .tip
+          font-size: 16px
+          color: #9b9b9b
+          margin-top: 32px
+          font-weight: normal
+        h3
+          margin-top: 5px
+          margin-bottom: 5px
+        p
+          font-size: 16px
+          font-weight: normal
+          color: $font-color
+          margin-bottom: 0px
+      .btns
+        margin-top: 40px
+        margin-right: 20px
+
+
+//工作邀約
+.work-Invitation
+
+//應徵紀錄
+.for-record
+  .list
+    li
+      height: 97px
+      padding: 0
+      a
+        padding: 0 0 0 57px
+      .img
+        float: left
+        width: 97px
+        height: 97px
+      .tip
+        margin-top: 16px
+        font-size: 14px
+        font-weight: normal
+        margin-bottom: 5px
+        color: #4a4a4a
+      .date
+        margin-top: 5px
+      .state
+        color: $font-color!important
+        right: 20px!important
+
+
+//追蹤的商家
+.chase-business
+  width: 774px
+  margin: 0 auto
+  h2
+    font-size: 20px
+    font-weight: 500
+    color: $font-color
+    margin: 39px 0 30px
+  .list
+    display: block
+    overflow: hidden
+    li
+      list-style: none
+      padding: 21px 20px
+      margin-bottom: 20px
+      width: 774px
+      height: 157px
+      background-color: #ffffff
+      border: solid 1px #e9e9e9
+      .img-circle
+        width: 115px
+        float: left
+        height: 115px
+      .info
+        float: left
+        margin-left: 20px
+        h4
+          font-size: 20px
+          font-weight: 500
+          color: $font-color
+          margin-top: 10px
+        .desc
+          width: 379px
+          height: 63px
+          font-size: 16px
+          font-weight: normal
+          color: $font-color
+          margin-top: 10px
+      .btns
+        float: right
+        .btn
+          width: 102px
+          height: 40px
+          display: block
+          line-height: 40px
+        .remove
+          background: none
+          border: 0px
+          text-align: right!important
+          margin-bottom: 20px
+          &:active
+            box-shadow: none
+
+
+
+
+
+
+.modal-negotiate
+  .modal-header
+    border-bottom: 0
+    padding-bottom: 0
+  .modal-content,.modal-dialog
+    width: 1036px!important
+    margin: auto !important
+    width: 100%
+    .modal-body
+      padding-top: 0
+  .modal-content
+    margin: 50px auto!important
+  .work-negotiate
+    h2
+      width: 489px
+      margin: 0 auto
+      font-size: 20px
+      font-weight: 500
+      color: #2b2b2d
+    .success-work
+      margin:  0 auto!important
+      h3
+        margin-top: 40px
+
+.modal-delete
+  .modal-header
+    border-bottom: 0
+  .modal-content,.modal-dialog
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    width: 305px!important
+    margin: auto !important
+    height: 327px!important
+    overflow: hidden!important
+    width: 100%
+    margin: 0 auto
+  .modal-body
+    text-align: center
+    h3
+      font-size: 18px
+      font-weight: 500
+      color: #2b2b2d
+    p
+      font-size: 14px
+      font-weight: normal
+      margin-top: 25px
+      margin-bottom: 64px
+      color: #2b2b2d
+    .btn
+      width: 275px
+      height: 55px
+      line-height: 55px
+      margin-bottom: 10px
 
 
 

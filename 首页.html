@@ -813,26 +813,5 @@
 <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script src="lib/Swiper-4.0.7/dist/js/swiper.min.js"></script>
 <script src="js/app.js"></script>
-<script>
-    $(function(){
-        // banner轮播
-        new Swiper ('.index-banner .swiper-container', {
-            loop: true,
-            pagination: {
-                clickable: true,
-                el: '.index-banner .swiper-pagination',
-            }
-        });
-        // 最新网美轮播
-        new Swiper('.new-net .swiper-container', {
-            slidesPerView: 4,
-            slidesPerColumn: 2,
-            spaceBetween: 39,
-            navigation: {
-                nextEl: '.new-net .swiper-button-next'
-            }
-        });
-    })
-</script>
 </body>
 </html>
