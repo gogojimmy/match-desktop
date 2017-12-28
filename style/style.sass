@@ -275,7 +275,7 @@ a.tag
     z-index: 9
 .line
   width: 100%
-  height: 2px
+  height: 1px
   background-color: #dedddf
 ul
   padding: 0px
@@ -648,7 +648,7 @@ nav
       bottom: 0px
       right: 20px
       margin: auto 0
-      transform: rotate(90deg)
+      transform: rotate(180deg)
     &:hover
       background-color: #DEDDDF
       &::after
@@ -1639,6 +1639,7 @@ header
     line-height: 55px
     &:first-of-type
       margin-right: 40px
+      border: none!important
 
 // 商家介绍
 .business-introduce
@@ -2598,15 +2599,18 @@ header
             overflow: hidden
             line-height: 22px
             height: 22px
-            color: $font-color
-            span:first-child
+            span
+              float: left
               font-size: 20px
               font-weight: 500
               margin-right: 10px
-            span
+              color: $font-color
+            a
               float: left
               font-size: 13px
               font-weight: normal
+              color: $font-color!important
+              margin-top: 0px
           a
             font-size: 15px
             font-weight: normal

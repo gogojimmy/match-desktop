@@ -9,10 +9,10 @@ $(function(){
         var self = $(this).parent();
         self.addClass('on').siblings().removeClass('on');
         self.siblings().find('ul').slideUp();
-        self.siblings().find('i').css({transform: 'rotate(90deg)'})
+        self.siblings().find('i').css({transform: 'rotate(180deg)'})
         self.children('ul').slideToggle(function(){
             if(self.children('ul').css('display')=='none'){
-                self.find('i').css({transform: 'rotate(90deg)'})
+                self.find('i').css({transform: 'rotate(180deg)'})
             }else{
                 self.find('i').css({transform: 'rotate(0deg)'})
             }
@@ -310,7 +310,7 @@ $(function(){
         // 首页banner轮播
         if($(".index-banner .swiper-container").length > 0){
             new Swiper ('.index-banner .swiper-container', {
-                loop: true,
+                // loop: true,
                 pagination: {
                     clickable: true,
                     el: '.index-banner .swiper-pagination',
@@ -333,7 +333,7 @@ $(function(){
         // 商家介紹 or 工作介紹
         if($(".business-introduce .banner .swiper-container").length > 0) {
             new Swiper('.business-introduce .banner .swiper-container', {
-                loop: true,
+                // loop: true,
                 navigation: {
                     nextEl: '.business-introduce .swiper-button-next',
                     prevEl: '.business-introduce .swiper-button-prev'
