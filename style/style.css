@@ -3059,7 +3059,7 @@ header {
       height: 97px;
       list-style: none;
       border: solid 1px #e9e9e9;
-      margin-bottom: 10px; }
+      margin-bottom: 20px; }
       .anInvitation-net .list > li:hover, .work-Invitation .list > li:hover {
         background-color: #f2f2f2; }
       .anInvitation-net .list > li .checkbox-box, .work-Invitation .list > li .checkbox-box {
@@ -3140,6 +3140,9 @@ header {
       overflow: hidden;
       border-bottom: solid 1px #e9e9e9;
       padding: 21px 20px; }
+      .storage-net .list li.mb-20, .collection-work .list li.mb-20 {
+        margin-bottom: 20px;
+        border: 1px solid #e9e9e9; }
       .storage-net .list li .info, .collection-work .list li .info {
         float: left;
         margin-left: 30px;
@@ -3350,7 +3353,8 @@ header {
     .help .type .item {
       text-align: center;
       display: inline-block;
-      margin-right: 160px; }
+      margin-right: 160px;
+      cursor: pointer; }
       .help .type .item img {
         width: 165px; }
       .help .type .item p {
@@ -3361,6 +3365,7 @@ header {
   .help li {
     list-style: none; }
   .help .list {
+    display: none;
     margin-top: 40px;
     display: block;
     overflow: hidden; }

@@ -364,6 +364,10 @@ $(function(){
         $(".sub-list li .tit").on('click', function(e){
             $(this).parent().toggleClass('open');
         });
+        $(".help .type .item").on('click', function(){
+            $(".help .list").hide();
+            $(".help .list").eq($(this).index()).show();
+        })
     // 常見問題 结束
 
     // 全局性事件处理 开始
